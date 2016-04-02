@@ -7,4 +7,3 @@ if (Meteor.isClient) {
      $scope.a = "5";
   }]);
 }
-
