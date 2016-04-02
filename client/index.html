@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<link href='http://fonts.googleapis.com/css?family=Work+Sans' rel='stylesheet' type='text/css'>
+
   <title>AnswerMe</title>
 </head>
 
@@ -35,7 +35,7 @@
 
 
   {{#if toJoinSession}}
-    <div>
+    <div class = "join-panel">
       <a onclick="window.location.reload()">&times;</a>
       <h1 class="text-center">Join a Session: {{toJoinSession}}</h1>
       <div class="container">
@@ -67,7 +67,7 @@
     </div>
   {{else}}
     {{#if toCreateSession}}
-        <section>
+        <section class = "create-panel">
           <a onclick="window.location.reload()">&times;</a>
           <h1 class="text-center header-text">Create Your Session</h1>
           <div class="container">
