@@ -3109,7 +3109,9 @@ textarea.input-lg {
     user-select: none;
     background-image: none;
     border: 1px solid transparent;
-    border-radius: 0px
+    border-radius: 0px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 .btn.active.focus,
 .btn.active:focus,

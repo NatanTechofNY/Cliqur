@@ -11,7 +11,11 @@ if (Meteor.isClient) {
        	'click #endssn': function() {
        		Session.setPersistent('userSessItem', {});
        		window.location.href = "/";
-       	}
-	});
-}
+       	},
+       	'click #mc': function() {
+			    var x = document.getElementById("status");
+			    setTimeout(function(){ x.value="Your response has been sent" }, 2000);
+			}
+		})
+       	};
 

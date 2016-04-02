@@ -78,6 +78,9 @@ body {
     position: absolute;
 
 }
+.move-right {
+    left: 10vh;
+}
 .block {
 	height: 100%;
 	width: 100%;
@@ -293,6 +296,9 @@ body {
     color: #333;
     height: 100vh;
 }
+.box {
+    left: 0;
+}
 }
 @media screen and (max-width: 780px) {
     .slide {
@@ -312,6 +318,9 @@ body {
 }
 .generate-button {
     top: 84vh;
+}
+.box {
+    left: 0;
 }
 }
 .nopadding {
@@ -348,4 +357,18 @@ input[type=password] {
 #pinTitle {
   z-index: 4;
   color: white;
+}
+.button-1 {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    height: 200% !important;
+}
+.nopadding-bottom {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+@media screen and (min-width: 1016px) {
+    .box {
+    left: 15vh;
+}
 }
