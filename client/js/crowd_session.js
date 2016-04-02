@@ -11,5 +11,12 @@ if (Meteor.isClient) {
        			document.getElementById('status').innerHTML=''
 			}, 2000);
 		}
-    });
+  });
+
+  Template.crowd_session.helpers({
+    userName: function () {
+      var sr = Users.findOne({"_id": Session.get('userSessItem').userId});
+      return sr && sr.fullName;
+    }
+  });
 };
