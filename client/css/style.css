@@ -68,11 +68,9 @@
 	
 }
 .create-panel {
-	z-index: 999;
-	margin-left: 7% !important;
 }
 body {
-	overflow-x: hidden;
+	overflow: hidden;
 }
 .block, .container {
     position: absolute;
