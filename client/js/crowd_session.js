@@ -25,15 +25,19 @@ if (Meteor.isClient) {
               "userId": authId,
               "body": questionBody
             };
-
-            document.querySelector('textarea[name="questionInput"]').disabled = true;
             Meteor.call('sendQuestion', obj, function(e) {
+<<<<<<< HEAD
               document.querySelector('textarea[name="questionInput"]').disabled = false;
               if (e) {
                 alert(e.error);
               }
               else
                 document.querySelector('textarea[name="questionInput"]').value = "";
+=======
+              if (e) {
+                alert(e.error);
+              };
+>>>>>>> f400bae3ed8563d47c9ad9e241801cb1189ac600
             });
           }
           else $('textarea[name="questionInput"]').select();
