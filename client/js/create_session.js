@@ -9,4 +9,9 @@ if (Meteor.isClient) {
        		window.location.href = "/";
        	}
     });
+    Template.create_session.helpers({
+    	sessionId: function () {
+    		return Router.current().params.sessionId;
+    	}
+    });
 }

@@ -1,9 +1,9 @@
 Meteor.publish('publicQuestions', function (data) {
-	return Questions.find({"parentSessionId": data.sessid, "isPublic": true});
+	return Questions.find({"parentSessionId": data, "isPublic": true});
 });
 
 Meteor.publish('adminQuestions', function (data) {
-	return Questions.find({"parentSessionId": data.sessid});
+	return Questions.find({"parentSessionId": data});
 });
 
 Meteor.publish('userQuestions', function (data) {
