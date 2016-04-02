@@ -151,7 +151,7 @@ body {
     margin-right: 20px
 }
 .student-item {
-    color: #fff;
+    color: #333;
 }
 .generate-button {
     position: relative;
@@ -237,6 +237,8 @@ body {
     bottom: 70vh;
 }
 #sidebar-wrapper {
+    background-color: #fff;
+    color: #333;
     height: 100vh;
 }
 }
