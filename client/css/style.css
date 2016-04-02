@@ -1,9 +1,31 @@
+#leftblock {
+	background-color: #247BA0;
+	left: 0%;
+	height: 100%;
+	width: 50%;
+}
+.row{
+	border: 2px solid green;
+}
+#rightblock {
+	background-color: #B2DBBF;
+	height: 100%;
+	width: 50%;
+}
+#right {
+	background-color: #B2DBBF;
+	height: 100%;
+	width: 100%;
+	left: 80%;
+}
 .block, .container {
     position: absolute;
-  left: 50%;
-  top: 50%;
-    
-  transform: translate(-50%, -50%);
+
+}
+.block {
+	border: 2px solid red;
+	height: 100%;
+	width: 100%;
 }
 .vr {
     width:2px;
