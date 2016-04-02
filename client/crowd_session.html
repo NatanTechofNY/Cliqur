@@ -5,7 +5,7 @@
             AnswerMe Students
             </a>
             <buttom class="btn btn-danger btn-lg navbar-right" style="z-index:1;" id="endssn">Exit Session</buttom>
-            <p class="navbar-text navbar-right">Signed in as {{userName}}</p>
+            <p id = "login-name" class="navbar-text navbar-right">Signed in as {{userName}}</p>
             <label id="status" class="navbar-text navbar-right"></label>
 
       </div>
@@ -28,12 +28,12 @@
             <input class="student-input" type="text" name="" placeholder="Enter your question here...">
             <div class="row qa-button-group">
               <div class="col-md-6">
-                <button class="btn btn-success student-qa-button student-response-button">
+                <button class="btn btn-warning student-qa-button student-response-button">
                   Send question
                 </button>
               </div>
               <div class="col-md-6">
-                <button class="btn btn-warning student-qa-button">
+                <button class="btn student-response-button btn-warning student-qa-button">
                   Clear
                 </button>
               </div>
