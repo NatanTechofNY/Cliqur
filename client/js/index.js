@@ -35,26 +35,51 @@ if (Meteor.isClient) {
 				alert('Please enter a valid student ID');
 
 
-			Meteor.call("addUser", {
-				fullName: fname + " " + lname,
-				studentId: stdntId,
-				sessionToAddToId: classCode
-			}, function(err, data) {
-				if(err)
-					alert(err.error);
-				else {
-					updateSess(data, 'userId');
-					updateSess(classCode, 'sessionId');
-					Router.go("/d/" + classCode);
+			function tempEndCall(datter) {
+				Meteor.call("addUser", {
+					fullName: fname + " " + lname,
+					studentId: stdntId,
+					sessionToAddToId: classCode,
+					pinr: datter
+				}, function(err, data) {
+					if(err)
+						alert(err.error);
+					else {
+						updateSess(data, 'userId');
+						updateSess(classCode, 'sessionId');
+						Router.go("/d/" + classCode);
+					};
+				});
+			};
+
+			Meteor.call('sesHasPin', classCode, function (e, rs) {
+				if (e) {
+					alert('Error finding session');
+				}
+				else{
+					if(rs) {
+						$('body').before('<div id="pinDiv"><center><form id="pinForm"><h3 id="pinTitle">Session is pin protected. Enter four-digit pin # to continue</h3><input type="password" name="pinpw"  maxlength="1" /><input type="password" name="pinpw"  maxlength="1" /><input type="password" name="pinpw" maxlength="1" /><input type="password" name="pinpw"  maxlength="1" /><br><br><button class="btn btn-default">Submit</button></form></center></div>');
+						$('#pinForm').on('submit', function(e) {
+							e.preventDefault();
+							var pinstr = "";
+							$('input[name="pinpw"]').each(function() {
+								pinstr += $(this).val();
+							});
+							tempEndCall(pinstr);
+						});
+					}
+					else tempEndCall(undefined);
 				};
 			});
+
+			
 		},
 		'submit #createSessionForm': function(e) {
 			e.preventDefault();
 			var fname = $('#firstNameInput2').val();
 			var lname = $('#lastNameInput2').val();
 			var className = $('#classNameInput2').val();
-			var pin = $('#inputPassword').val();
+			var pin = $('.inputPasswordTs').val();
 			var regCheck = /^\d+$/;
 			if(regCheck.test(fname) || regCheck.test(lname) || fname.length < 2 || lname.length < 2)
 				alert('Please enter a valid name.');
