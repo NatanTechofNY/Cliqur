@@ -5,7 +5,7 @@
 	margin: 3%;
 }
 #right-container {
-	background-color: #EF6C00;	
+	background-color: white;	
 	height: 100% !important;
 	width: 60% !important;
 }
@@ -35,40 +35,43 @@
 	background-color: 2px solid red !important;
 	margin: auto;
 	margin-top: 31%;
-	background-color: #EF6C00;
+	background-color: white;
 	height: 100% !important;
 }
 #createSessionBtn {
-	margin-left: 6% !important;
-	margin-top: 10% !important;
-	height: 12% !important;
-	width: 20% !important;
-	background-color: #00897B;
-	color: white;
+	margin-left: 33% !important;
+	margin-top: 77% !important;
+	height: 5% !important;
+	width: 30% !important;
+	background-color: white;
+	color: black;
 	border-radius: 1px !important;
-	font-family: Work Sans;
+	
 }
 #codeInput {
 	font-size: 14px;
 	margin: auto;
+	margin-top: 24% !important;
 	width: 60%;
-	height: 17% !important;
-	margin-bottom: 3%;
-	font-family: Work Sans;
+	height: 6% !important;
+	
 }
 #joinSessionBtn{
 	position: relative !important;
-	top: 6% !important;
+	top: 4% !important;
 	margin: auto !important;
 	width: 30% !important;
-	background-color: #00897B;
+	height: 4.5% !important;
+	background-color: black;
 	color: white;
 	border: none;
 	border-radius: 1px !important;
-	font-family: Work Sans;
+	
+}
+.create-panel {
 }
 body {
-	overflow-x: hidden;
+	overflow: hidden;
 }
 .block, .container {
     position: absolute;
@@ -107,6 +110,10 @@ body {
       background-color: #fff;
       position: relative;
       z-index: 999;
+}
+.control-label {
+	width: 20%;
+	height: 12%;
 }
 
 /*iphone*/
@@ -215,8 +222,8 @@ body {
     height: 50px;
 }
 .qa-button-group {
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 .response-area {
     top: 20vh;
@@ -227,7 +234,8 @@ body {
     width: 100%;
 }
 .student-response-button:hover {
-    background-color: red;
+    background-color: #2ec4b6;
+    color: #fff;
 }
 .response-label {
     padding-top: 30px;
