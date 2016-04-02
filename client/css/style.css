@@ -102,7 +102,7 @@ body {
     .fix-button-left {
         height: 50px;
     width: 30%;
-    top: 30vh;
+    top: 20vh;
       left: 4%;
       background-color: #fff;
       position: relative;
@@ -112,7 +112,7 @@ body {
 /*iphone*/
 @media screen and (min-width: 320px) {
     .fix-button-left {
-        height: 50px;
+    height: 50px;
     width: 80%;
     top: 20vh;
       left: 4%;
@@ -175,10 +175,19 @@ body {
     left: 10vh;
     position: absolute;
 }
-.panel-buttons {
+.panel-button-group {
     position: absolute;
     bottom: 0%;
     left: 50vh;
+    width: 70%;
+    padding: 0px;
+    margin: 0px;
+}
+.panel-button {
+    width: 60%;
+    padding: 40px; 
+    margin: 0px; 
+    height: 200px;
 }
 .btn-lg {
     width: 150px;
@@ -186,11 +195,11 @@ body {
     margin-right: 20px
 }
 .student-item {
-    color: #fff;
+    color: #333;
 }
 .generate-button {
     position: relative;
-    top: 70%;
+    top: 76%;
     border-radius: 0px;
     height: 100px;
 }
@@ -241,6 +250,66 @@ body {
 }
 .padding-top {
    padding-top: 20px;
+}
+.slide {
+    padding-top: 30px;
+    height: 81vh;
+    width: 70%;
+    left: 50vh;
+    position: fixed;
+}
+@media screen and (max-width: 450px) {
+    body {
+        height: 100%;
+    }
+    .slide {
+        padding-top: 30px;
+    height: 81vh;
+    width: 90%;
+    left: 6vh;
+    position: fixed;
+}
+    .panel-button-group {
+    position: fixed;
+    bottom: 0%;
+    left: 6vh;
+    width: 90%;
+    padding: 0px;
+    margin: 0px;
+}
+.generate-button {
+    bottom: 70vh;
+}
+#sidebar-wrapper {
+    background-color: #fff;
+    color: #333;
+    height: 100vh;
+}
+}
+@media screen and (max-width: 780px) {
+    .slide {
+    padding-top: 30px;
+    height: 81vh;
+    width: 100%;
+    left: 0vh;
+    position: fixed;
+}
+    .panel-button-group {
+    position: fixed;
+    bottom: 0%;
+    left: 0vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.generate-button {
+    top: 84vh;
+}
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+   border-radius: 0px;
 }
 #pinDiv {
   z-index: 2;
