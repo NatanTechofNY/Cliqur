@@ -1,56 +1,41 @@
 if (Meteor.isClient) {
-	(function(){
+	Template.indexItem.rendered = function () {
 
-		var testing;
-
-	    angular.module('indexApp', ['angular-meteor', 'ui.router']);
-		
-
-	    angular.module('indexApp').config(['$stateProvider', '$urlRouterProvider',
-		    function ($stateProvider, $urlRouterProvider) {
-		        $urlRouterProvider.otherwise("/");
+	};
 
 
-		        $stateProvider
-		            .state('home', {
-		                url: "/",
-		                template: '<index.html></index.html>'
-		            })
-		            .state('crowd_session', {
-		                url: "/crowd_session",
-		                template: UiRouter.template('crowd_session.html')
-		            })
-		            .state('state1.list', {
-		                url: "/list",
-		                template: UiRouter.template('state1.list1.html')
-		            })
-		            .state('state2', {
-		                url: "/state2",
-		                template: UiRouter.template('state2.html')
-		            });
-	    }])
+	Template.indexItem.events({
+		'click #joinSessionBtn': function () {
+			var classCode = $('#codeInput').val();
+			Session.set('toJoinSession', classCode);
+		},
+		'click #createSessionBtn': function() {
+			Session.set('toCreateSession', true);	
+		},
+		'submit #toJoinForm': function(e) {
+			e.preventEdfault();
+			var classCode = Session.get('toJoinSession');
+			var fname = $('#firstNameInput').val();
+			var lname = $('#lastNameInput').val();
+			var stdntId = $('#studentId').val();
+			
+		},
+		'submit #createSessionForm': function(e) {
+			e.preventdefault();
+			var classCode = Session.get('toJoinSession');
+			var fname = $('#firstNameInput2').val();
+			var lname = $('#lastNameInput2').val();
+			var className = $('#classNameInput2').val();
+			var pin = $('#inputPassword').val();
+		}
+	});
 
-
-		angular.module("indexApp").controller("indexCtrl", ['$scope', function($scope){
-				 angular.module('indexApp').controller('buttonCtrl', ['$scope', function($scope){
-				 	
-				}]);
-				angular.module('indexApp').controller('MyCtrl', ['$scope', function($scope){
-					$scope.enterCode = function() {
-						console.log($('#codeInput').val());
-						$scope.code = $('#codeInput').val();
-				}
-				}]);
-	
-
-		}]);
-	   
-	   
-
-		$("#menu-toggle").click(function(e) {
-			e.preventDefault();
-			$("#wrapper").toggleClass("toggled");
-		});
-
-	})();
+	Template.indexItem.helpers({
+		toJoinSession: function() {
+			return Session.get('toJoinSession');
+		},
+		toCreateSession: function() {
+			return Session.get('toCreateSession');
+		}
+	});
 };

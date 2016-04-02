@@ -1,36 +1,37 @@
+<template name="crowd_session">
+  <div>
 
-<div ng-controller="crowdSessionCtrl">
-
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          AnswerMe Students
-          </a>
-          <buttom class="btn btn-danger btn-lg navbar-right">Exit Session</buttom>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            AnswerMe Students
+            </a>
+            <buttom class="btn btn-danger btn-lg navbar-right">Exit Session</buttom>
+        </div>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-md-8">
+        <input class="form-control student-input" placeholder="Enter your questions here!">
       </div>
     </div>
-  </nav>
-  <div class="row">
-    <div class="col-md-8">
-      <input class="form-control student-input" placeholder="Enter your questions here!">
+    <div class="row student-response-group">
+      <div class="col-md-2 col-md-offset-2">
+        <button class="btn btn-success">Fire</button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default">A</button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default">B</button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default">C</button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default">D</button>
+      </div>
     </div>
   </div>
-  <div class="row student-response-group">
-    <div class="col-md-2 col-md-offset-2">
-      <button class="btn btn-success">Fire</button>
-    </div>
-    <div class="col-md-2">
-      <button class="btn btn-default">A</button>
-    </div>
-    <div class="col-md-2">
-      <button class="btn btn-default">B</button>
-    </div>
-    <div class="col-md-2">
-      <button class="btn btn-default">C</button>
-    </div>
-    <div class="col-md-2">
-      <button class="btn btn-default">D</button>
-    </div>
-  </div>
-</div>
+</template>
