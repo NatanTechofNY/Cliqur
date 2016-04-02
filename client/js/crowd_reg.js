@@ -1,5 +1,0 @@
-if (Meteor.isClient) {
-
-	
-	
-}
