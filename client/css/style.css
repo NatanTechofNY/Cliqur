@@ -212,6 +212,8 @@ body {
     height: 100px;
 }
 .student-input {
+	font-size: 14px !important;
+	padding-left: 5px;
     width: 100%;
     height: 70px;
     
@@ -231,6 +233,13 @@ body {
 }
 .student-response-button {
     width: 100%;
+	color: white;
+	border-radius: 2px;
+}
+#mc {
+	font-size: 13px !important;
+	background-color: #263238;
+	
 }
 .student-response-button:hover {
     background-color: #2ec4b6;
@@ -238,6 +247,7 @@ body {
 	border: none;
 }
 .response-label {
+	width: 400px;
     padding-top: 30px;
     padding-bottom: 10px;
 }
