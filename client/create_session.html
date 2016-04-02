@@ -1,85 +1,162 @@
-<template name="create_session">
-  <div>
-    <div>
-      
-      <nav class="navbar navbar-default">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            AnswerMe
-          </a>
-          <button class="btn btn-danger btn-lg navbar-right">End Session</button>
-        </div>
-    </nav>
+<!DOCTYPE html>
+<html lang="en" ng-app = "createSessionApp">
 
-    <section>
-      <div class="scrollbar">
-        <div class="list-group">
-          <a href="#" class="list-group-item disabled">
-            Questions
-          </a>
-          <a href="#" class="list-group-item">'Person's name': dsjfhkjsdhf kjhgd</a>
-          <a href="#" class="list-group-item">Question 2</a>
+<head>
 
-        </div>
-      </div>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-      <div class="row panel-buttons">
-        <div class="col-md-5 col-md-offset-2">
-          <button class="btn btn-success btn-lg">Throw</button>
-        </div>
-        <div class="col-md-5">
-          <button class="btn btn-warning btn-lg">Delete</button>
-        </div>
-      </div>
-    </section>
+    <title>Simple Sidebar - Start Bootstrap Template</title>
 
-        <div id="wrapper">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
 
-            <!-- Sidebar -->
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav">
-                    <li class="sidebar-brand">
-                        <a href="#">
-                            Class Attendance
-                        </a>
-                    </li>
-                    <li class="student-item">
-                        Peter Zheng
-                    </li>
-                    <li class="student-item">
-                        Rabeea Ahmad
-                    </li>
-                    <li class="student-item">
-                        Natan
-                    </li>
-                    <li class="student-item">
-                        Jay
-                    </li>
-                    <li class="student-item">
-                        Rachel
-                    </li>
-                     <li class="student-item">
-                        
-                    </li>
-                </ul>
-                <button class="btn btn-danger btn-block generate-button">Generate Report</button>
-            </div>
-            <!-- /#sidebar-wrapper -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-            <!-- Page Content -->
-            <div id="page-content-wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <a href="#menu-toggle" class="btn btn-default fix-button-left vertical-text" id="menu-toggle">Show Attendance</a>
+</head>
+
+<body ng-controller = "adminQCtrl">
+  
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        AnswerMe
+      </a>
+      <button class="btn btn-danger btn-lg navbar-right">End Session</button>
+    </div>
+</nav>
+
+<section>
+  <div style = "data-interval=false" id="carousel-example" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="row">
+        <div class="col-xs-offset-5 col-xs-8">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="carousel-content">
+                        <div>
+                            <p class = "question-text">Question 1: ddhfsjdhvuehfug g</p>
                         </div>
                     </div>
                 </div>
+                <div class="item">
+                    <div class="carousel-content">
+                        <div>
+                            <p class = "question-text">Question 2: dsvbjdfbvfguyvgurefguvfehvlk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="carousel-content">
+                        <div>                           
+                            <p  class = "question-text">Question 3: jdhvjvbfhivbbfvhwefckhvjiswzdvr</p>
+                        </div>
+                    </div>
+                </div>
+				  <div class="item" ng-repeat = "q in questions">
+                    <div class="carousel-content">
+                        <div>                           
+                            <p>{{q.body}}</p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-            <!-- /#page-content-wrapper -->
-
         </div>
-        <!-- /#wrapper -->
-      </div>
+    </div>
+    <!-- Controls --> <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+ <a class="right carousel-control" href="#carousel-example" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+
+</div>
+
+  <div class="row panel-buttons">
+    <div class="col-md-5 col-md-offset-2">
+      <button class="btn btn-success btn-lg">Throw</button>
+    </div>
+    <div class="col-md-5">
+      <button class="btn btn-warning btn-lg">Delete</button>
+    </div>
   </div>
-</template>
+</section>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Class Attendance
+                    </a>
+                </li>
+                <li class="student-item">
+                    Peter Zheng
+                </li>
+                <li class="student-item">
+                    Rabeea Ahmad
+                </li>
+                <li class="student-item">
+                    Natan
+                </li>
+                <li class="student-item">
+                    Jay
+                </li>
+                <li class="student-item">
+                    Rachel
+                </li>
+                 <li class="student-item" ng-repeat = "student in students">
+                    
+                </li>
+            </ul>
+            <button class="btn btn-danger btn-block generate-button">Generate Report</button>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-default fix-button-left vertical-text" id="menu-toggle">Show Attendance</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/angular.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/create_session.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
