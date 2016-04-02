@@ -64,8 +64,15 @@
 	color: white;
 	border: none;
 	border-radius: 1px !important;
-	}
+	
+}
+.create-panel {
+}
+body {
+}
+.block, .container {
 
+}
 .move-right {
     left: 10vh;
 }
@@ -235,15 +242,16 @@
 }
 
 .public-display {
-    height: 42vh;
+    height: 82vh;
     width: 100%;
+    overflow: scroll;
 }
 .public-display li {
     font-size: 300%;
     padding: 50px;
 }
 .public-poll {
-    height: 38vh;
+    height: 88vh;
     width: 100%;
 }
 .padding-top {
@@ -338,16 +346,13 @@ input[type=password] {
     left: 50%;
     margin-top: -100px;
     margin-left: -200px;
-    z-index: 999;
+    z-index: 3;
 }
 
 #pinTitle {
   z-index: 4;
   color: white;
 }
-
-
-
 
 #createSessionForm{
     overflow: hidden;

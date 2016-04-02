@@ -48,8 +48,13 @@ if (Meteor.isClient) {
 					sessionToAddToId: classCode,
 					pinr: datter
 				}, function(err, data) {
-					if(err)
+					if(err){
+						$('input[name="pinpw"]').each(function() {
+							$(this).val('');
+						});
+						$('input[name="pinpw"]').focus();
 						return alert(err.error);
+					}
 					else {
 						updateSess(data, 'userId');
 						updateSess(classCode, 'sessionId');
@@ -64,6 +69,7 @@ if (Meteor.isClient) {
 				}
 				else{
 					if(rs) {
+						$('#joinSession, .modal-backdrop').hide();
 						$('body').before('<div id="pinDiv"><center><form id="pinForm"><h3 id="pinTitle">Session is pin protected. Enter four-digit pin # to continue</h3><input type="password" name="pinpw"  maxlength="1" /><input type="password" name="pinpw"  maxlength="1" /><input type="password" name="pinpw" maxlength="1" /><input type="password" name="pinpw"  maxlength="1" /><br><br><button class="btn btn-default">Submit</button></form></center></div>');
 						$('input[name="pinpw"]').keyup(function() {
 							if($(this).val().length >= 1) {
@@ -78,7 +84,6 @@ if (Meteor.isClient) {
 								pinstr += $(this).val();
 							});
 							tempEndCall(pinstr);
-							$('#pinDiv').fadeOut(900);
 						});
 					}
 					else tempEndCall(undefined);
@@ -130,7 +135,10 @@ if (Meteor.isClient) {
 
 		}
 	});
-
+	Template.indexItem.destroyed = function() {
+		$('.modal-backdrop').hide();
+		$('#pinDiv').fadeOut(900);
+	};
 	Template.indexItem.helpers({
 		toJoinSession: function() {
 			return Session.get('toJoinSession');
