@@ -25,10 +25,14 @@ if (Meteor.isClient) {
               "userId": authId,
               "body": questionBody
             };
+
+            document.querySelector('textarea[name="questionInput"]').disabled = true;
             Meteor.call('sendQuestion', obj, function(e) {
+              // document.querySelector('textarea[name="questionInput"]').disabled = false;
               if (e) {
                 alert(e.error);
-              };
+              }
+              else;
             });
           }
           else $('textarea[name="questionInput"]').select();
