@@ -9,6 +9,6 @@ Meteor.publish('adminQuestions', function (data) {
 Meteor.publish('userQuestions', function (data) {
 	return Questions.find({"parentSessionId": data.sessid, "authorId": data.authorId});
 });
-
+	
 
 

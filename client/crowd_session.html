@@ -25,15 +25,15 @@
       <div class="row">
         <div class="col-md-offset-2 col-md-8 col-md-offset-2">
           <div class="container-fluid">
-            <input class="student-input" type="text" name="" placeholder="Enter your question here....">
+            <textarea class="student-input" name="questionInput" placeholder="Enter your question here...."></textarea>
             <div class="row qa-button-group">
               <div class="col-md-6">
-                <button class="btn btn-success student-qa-button student-response-button">
+                <button id="sendQuestionBtn" class="btn btn-success student-qa-button student-response-button">
                   Send question
                 </button>
               </div>
               <div class="col-md-6">
-                <button class="btn btn-warning student-qa-button">
+                <button id="clearQuestionBtn" class="btn btn-warning student-qa-button">
                   Clear
                 </button>
               </div>
@@ -44,16 +44,16 @@
               </div>
               
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button" id="mc"><h2>A</h2></button>
+                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>A</h2></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button" id="mc"><h2>B</h2></button>
+                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>B</h2></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button" id="mc"><h2>C</h2></button>
+                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>C</h2></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button" id="mc"><h2>D</h2></button>
+                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>D</h2></button>
               </div>
             </div>
           </div>

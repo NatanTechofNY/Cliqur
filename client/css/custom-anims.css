@@ -1,0 +1,16 @@
+.student-response-button>span{
+	display: block;
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%; width: 100%; text-align: center;line-height: 135px;
+	background-color: #F7F7F7;
+	opacity: 0;
+	-webkit-transition: all .6s;
+	   -moz-transition: all .6s;
+	    -ms-transition: all .6s;
+	     -o-transition: all .6s;
+	        transition: all .6s;
+}
+.student-response-button>span:hover{
+	color: black;
+}
