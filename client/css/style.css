@@ -212,10 +212,10 @@ body {
 	
 }
 .container{
-	height: 130%;
+	overflow-y: hidden;
+	height: 120%;
 	width: 100%;
 	background-color: #0E0E15;
-	border: 2px solid red;
 }
 .jumbotron {
 	margin-top: 3% !important;
@@ -247,6 +247,8 @@ body {
 	border: 1px solid white;
 	border-radius: 4px;
 	height: 45px;
+	margin: auto !important;
+	display: inline-block !important;
 	background-color: transparent;	
 }
 .student-qa-button:hover {
@@ -293,9 +295,10 @@ body {
    padding-top: 20px;
 }
 #login-name {
+	font-size: 12px;
+	margin-right: 5%;
+	margin-top: 1.2%;
 	color: white;
-	position: relative;
-	top: 5% !important;
 }
 .slide {
     padding-top: 30px;
@@ -415,7 +418,7 @@ input[type=password] {
     float: right;
 }
 .navbar {
-	background-color: transparent;
+	background-color: #0E0E15;
 	border-radius: 0px !important;
 }
 .navbar-text {
@@ -429,7 +432,9 @@ input[type=password] {
 	color: white;
 }
 .exit {
+	cursor: pointer;
 	background-color: #FF7043;
 	height: 40%;
 	width: 12%;
+	margin-right:auto; 
 }

@@ -4,7 +4,7 @@
           <a class="navbar-brand" href="#">
             AnswerMe Students
             </a>
-            <buttom class="exit navbar-right" style="z-index:1;" id="endssn">Exit Session</buttom>
+            <buttom class="exit" style="z-index:1;" id="endssn">Exit Session</buttom>
             <p id = "login-name" class="navbar-right">Signed in as {{userName}}</p>
             <label id="status" class="navbar-text navbar-right"></label>
 
@@ -30,12 +30,9 @@
 
               <div class="col-md-6">
 
-                <button class="student-qa-button ">
+				  <button id="submitQuestionBtn" class="student-qa-button "> Submit </button>
 
-                <button id="clearQuestionBtn" class="btn student-response-button btn-warning student-qa-button">
-
-                  Clear
-                </button>
+                <button id="clearQuestionBtn" class="student-qa-button">Clear</button>
               </div>
             </div>
             <div class="row">
