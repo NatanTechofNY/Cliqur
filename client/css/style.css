@@ -64,15 +64,8 @@
 	color: white;
 	border: none;
 	border-radius: 1px !important;
-	
-}
-.create-panel {
-}
-body {
-}
-.block, .container {
+	}
 
-}
 .move-right {
     left: 10vh;
 }
@@ -242,16 +235,15 @@ body {
 }
 
 .public-display {
-    height: 82vh;
+    height: 42vh;
     width: 100%;
-    overflow: scroll;
 }
 .public-display li {
     font-size: 300%;
     padding: 50px;
 }
 .public-poll {
-    height: 88vh;
+    height: 38vh;
     width: 100%;
 }
 .padding-top {
@@ -376,4 +368,12 @@ input[type=password] {
 }
 .navbar-text {
     padding-right: 20px;
+}
+.progress span{
+    float: left;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    padding-right: 5px;
+    padding-left: 5px;
 }
