@@ -1,83 +1,85 @@
-<div ng-controller = "sessionCtrl" ng-show = "showContent(name)">
-<div ng-controller = "adminQCtrl">
-  
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        AnswerMe
-      </a>
-      <button class="btn btn-danger btn-lg navbar-right">End Session</button>
-    </div>
-</nav>
+<template name="crowd_session.html">
+<div ng-controller = "sessionCtrl">
+  <div ng-controller = "adminQCtrl">
+    
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          AnswerMe
+        </a>
+        <button class="btn btn-danger btn-lg navbar-right">End Session</button>
+      </div>
+  </nav>
 
-<section>
-  <div class="scrollbar">
-    <div class="list-group">
-      <a href="#" class="list-group-item disabled">
-        Questions
-      </a>
-      <a href="#" class="list-group-item">'Person's name': dsjfhkjsdhf kjhgd</a>
-      <a href="#" class="list-group-item" ng-repeat = "q in questions">Question 2</a>
+  <section>
+    <div class="scrollbar">
+      <div class="list-group">
+        <a href="#" class="list-group-item disabled">
+          Questions
+        </a>
+        <a href="#" class="list-group-item">'Person's name': dsjfhkjsdhf kjhgd</a>
+        <a href="#" class="list-group-item" ng-repeat = "q in questions">Question 2</a>
 
+      </div>
     </div>
+
+    <div class="row panel-buttons">
+      <div class="col-md-5 col-md-offset-2">
+        <button class="btn btn-success btn-lg">Throw</button>
+      </div>
+      <div class="col-md-5">
+        <button class="btn btn-warning btn-lg">Delete</button>
+      </div>
+    </div>
+  </section>
+
+      <div id="wrapper">
+
+          <!-- Sidebar -->
+          <div id="sidebar-wrapper">
+              <ul class="sidebar-nav">
+                  <li class="sidebar-brand">
+                      <a href="#">
+                          Class Attendance
+                      </a>
+                  </li>
+                  <li class="student-item">
+                      Peter Zheng
+                  </li>
+                  <li class="student-item">
+                      Rabeea Ahmad
+                  </li>
+                  <li class="student-item">
+                      Natan
+                  </li>
+                  <li class="student-item">
+                      Jay
+                  </li>
+                  <li class="student-item">
+                      Rachel
+                  </li>
+                   <li class="student-item" ng-repeat = "student in students">
+                      
+                  </li>
+              </ul>
+              <button class="btn btn-danger btn-block generate-button">Generate Report</button>
+          </div>
+          <!-- /#sidebar-wrapper -->
+
+          <!-- Page Content -->
+          <div id="page-content-wrapper">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <a href="#menu-toggle" class="btn btn-default fix-button-left vertical-text" id="menu-toggle">Show Attendance</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- /#page-content-wrapper -->
+
+      </div>
+      <!-- /#wrapper -->
   </div>
-
-  <div class="row panel-buttons">
-    <div class="col-md-5 col-md-offset-2">
-      <button class="btn btn-success btn-lg">Throw</button>
-    </div>
-    <div class="col-md-5">
-      <button class="btn btn-warning btn-lg">Delete</button>
-    </div>
-  </div>
-</section>
-
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Class Attendance
-                    </a>
-                </li>
-                <li class="student-item">
-                    Peter Zheng
-                </li>
-                <li class="student-item">
-                    Rabeea Ahmad
-                </li>
-                <li class="student-item">
-                    Natan
-                </li>
-                <li class="student-item">
-                    Jay
-                </li>
-                <li class="student-item">
-                    Rachel
-                </li>
-                 <li class="student-item" ng-repeat = "student in students">
-                    
-                </li>
-            </ul>
-            <button class="btn btn-danger btn-block generate-button">Generate Report</button>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <a href="#menu-toggle" class="btn btn-default fix-button-left vertical-text" id="menu-toggle">Show Attendance</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
 </div>
-</div>
+</template>
