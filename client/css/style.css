@@ -5,7 +5,7 @@
 	margin: 3%;
 }
 #right-container {
-	background-color: #FA7921;	
+	background-color: #EF6C00;	
 	height: 100% !important;
 	width: 60% !important;
 }
@@ -26,32 +26,47 @@
 }
 #leftblock {
 	background-color: 2px solid red !important;
-	margin: auto;
-	margin-top: 20%;
+	margin-left: 7%;
+	margin-top: 15%;
 	background-color: white;
 	height: 100% !important;
 }
 #rightblock {
 	background-color: 2px solid red !important;
 	margin: auto;
-	margin-top: 20%;
-	background-color: #FA7921;
+	margin-top: 31%;
+	background-color: #EF6C00;
 	height: 100% !important;
 }
 #createSessionBtn {
-	margin: auto;
+	margin-left: 6% !important;
+	margin-top: 10% !important;
+	height: 12% !important;
+	width: 20% !important;
+	background-color: #00897B;
+	color: white;
+	border-radius: 1px !important;
+	font-family: Work Sans;
 }
 #codeInput {
+	font-size: 14px;
 	margin: auto;
 	width: 60%;
+	height: 17% !important;
+	margin-bottom: 3%;
+	font-family: Work Sans;
 }
 #joinSessionBtn{
-	margin-top: 2% !important;
+	position: relative !important;
+	top: 6% !important;
 	margin: auto !important;
-	width: 50%;
-	
+	width: 30% !important;
+	background-color: #00897B;
+	color: white;
+	border: none;
+	border-radius: 1px !important;
+	font-family: Work Sans;
 }
-
 body {
 	overflow-x: hidden;
 }
