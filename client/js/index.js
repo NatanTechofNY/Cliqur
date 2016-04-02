@@ -20,7 +20,7 @@ if (Meteor.isClient) {
 			Session.set('toCreateSession', true);	
 		},
 		'submit #toJoinForm': function(e) {
-			e.preventEdfault();
+			e.preventDefault();
 			var classCode = Session.get('toJoinSession');
 			var fname = $('#firstNameInput').val();
 			var lname = $('#lastNameInput').val();
@@ -30,9 +30,21 @@ if (Meteor.isClient) {
 				Meteor.Error('Please enter a valid name.');
 			else if (studentId.length < 2)
 				Meteor.Error('Please enter a valid student ID');
+
+
+			Meteor.call("addUser", {
+				fullName: fname + " " + lname,
+				studentId: stdntId,
+				sessionToAddToId: classCode
+			}, function(err, data) {
+				if(err)
+					alert(err.error);
+				else
+					Router.go("/d" + classCode)
+			});
 		},
 		'submit #createSessionForm': function(e) {
-			e.preventdefault();
+			e.preventDefault();
 			var fname = $('#firstNameInput2').val();
 			var lname = $('#lastNameInput2').val();
 			var className = $('#classNameInput2').val();
@@ -42,8 +54,28 @@ if (Meteor.isClient) {
 				Meteor.Error('Please enter a valid name.');
 			else if (className.length < 2)
 				Meteor.Error('Class name must be longer then two characters');
-			else if(!regCheck.test(pin))
-				Meter.Error('Pin must only be numbers.')
+			else if(pin.length) {
+				if(!regCheck.test(pin) && pin.length != 4)
+					Meter.Error('Pin can only be 4 numbers.');
+			}
+
+			Meteor.call("addUser", {
+				fullName: fname + " " + lname,
+				studentId: stdntId,
+			}, function(err, data) {
+				if(err)
+					alert(err.error);
+				else {
+					Meteor.call('createSession', {sessionOwnerId: data, sessionName: className, pin: pin, studentId: stdntId}, 
+					function(err, data) {
+				if(err)
+					alert(err.error);
+				else
+					Router.go("/d" + classCode)
+					});
+				}
+			});
+
 		}
 	});
 
