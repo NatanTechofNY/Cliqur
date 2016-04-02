@@ -3093,7 +3093,7 @@ textarea.input-lg {
 }
 .btn {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 20px 45px;
     margin-bottom: 0;
     font-size: 14px;
     font-weight: 400;
@@ -3110,7 +3110,7 @@ textarea.input-lg {
     user-select: none;
     background-image: none;
     border: 1px solid transparent;
-    border-radius: 4px
+    border-radius: 0px
 }
 .btn.active.focus,
 .btn.active:focus,

@@ -10,58 +10,64 @@
 </nav>
 
 <section>
-  <div style = "data-interval=false" id="carousel-example" class="carousel slide" data-ride="carousel">
-    <!-- Wrapper for slides -->
+<div class="container-fluid">
     <div class="row">
-        <div class="col-xs-offset-5 col-xs-8">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="carousel-content">
-                        <div>
-                            <p class = "question-text">Question 1: ddhfsjdhvuehfug g</p>
+     <div class="col-md-offset-3 col-md-9">
+                  <div style = "data-interval=false" id="carousel-example" class="carousel slide" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="row">
+                        <div class="col-xs-offset-5 col-xs-8">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="carousel-content">
+                                        <div>
+                                            <p class = "question-text">Question 1: ddhfsjdhvuehfug g</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="carousel-content">
+                                        <div>
+                                            <p class = "question-text">Question 2: dsvbjdfbvfguyvgurefguvfehvlk</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="carousel-content">
+                                        <div>                           
+                                            <p  class = "question-text">Question 3: jdhvjvbfhivbbfvhwefckhvjiswzdvr</p>
+                                        </div>
+                                    </div>
+                                </div>
+                				  <div class="item">
+                                    <div class="carousel-content">
+                                        <div>                           
+                                            <p>{{q.body}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div>
-                            <p class = "question-text">Question 2: dsvbjdfbvfguyvgurefguvfehvlk</p>
+                            <!-- Controls --> 
+                            <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                          </a>
+                         <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                          </a>
+
                         </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div>                           
-                            <p  class = "question-text">Question 3: jdhvjvbfhivbbfvhwefckhvjiswzdvr</p>
-                        </div>
-                    </div>
-                </div>
-				  <div class="item">
-                    <div class="carousel-content">
-                        <div>                           
-                            <p>{{q.body}}</p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
         </div>
     </div>
-    <!-- Controls --> <a class="left carousel-control" href="#carousel-example" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
- <a class="right carousel-control" href="#carousel-example" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-
 </div>
-
-  <div class="row panel-buttons">
-    <div class="col-md-5 col-md-offset-2">
-      <button class="btn btn-success btn-lg">Throw</button>
+  <div class="row panel-button-group">
+    <div class="col-md-6 nopadding">
+      <button class="btn btn-success btn-block">Throw</button>
     </div>
-    <div class="col-md-5">
-      <button class="btn btn-warning btn-lg">Delete</button>
+    <div class="col-md-6 nopadding">
+      <button class="btn btn-warning btn-block">Delete</button>
     </div>
   </div>
 </section>
