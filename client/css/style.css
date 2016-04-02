@@ -276,7 +276,7 @@ body {
     left: 6vh;
     position: fixed;
 }
-    .panel-button-group {
+.panel-button-group {
     position: fixed;
     bottom: 0%;
     left: 6vh;
@@ -347,4 +347,9 @@ input[type=password] {
 #pinTitle {
   z-index: 4;
   color: white;
+}
+
+
+#createSessionForm{
+    overflow: hidden;
 }

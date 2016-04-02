@@ -19,8 +19,14 @@ if (Meteor.isClient) {
 		'click #createSessionBtn': function() {	
 			
 			Session.set('toCreateSession', true);	
-			
-			
+				
+		},
+		'keyup input.inputPasswordTs': function(e) {
+			var $this = $(e.currentTarget);
+			if($this.val().length >= 1) {
+		      var input_flds = $this.closest('form').find(':input.inputPasswordTs');
+		      input_flds.eq(input_flds.index(e.currentTarget) + 1).select();
+		    }
 		},
 		'submit #toJoinForm': function(e) {
 			e.preventDefault();
@@ -59,6 +65,12 @@ if (Meteor.isClient) {
 				else{
 					if(rs) {
 						$('body').before('<div id="pinDiv"><center><form id="pinForm"><h3 id="pinTitle">Session is pin protected. Enter four-digit pin # to continue</h3><input type="password" name="pinpw"  maxlength="1" /><input type="password" name="pinpw"  maxlength="1" /><input type="password" name="pinpw" maxlength="1" /><input type="password" name="pinpw"  maxlength="1" /><br><br><button class="btn btn-default">Submit</button></form></center></div>');
+						$('input[name="pinpw"]').keyup(function() {
+							if($(this).val().length >= 1) {
+						      var input_flds = $(this).closest('form').find(':input[name="pinpw"]');
+						      input_flds.eq(input_flds.index(this) + 1).select();
+						    }
+						});
 						$('#pinForm').on('submit', function(e) {
 							e.preventDefault();
 							var pinstr = "";
@@ -79,7 +91,12 @@ if (Meteor.isClient) {
 			var fname = $('#firstNameInput2').val();
 			var lname = $('#lastNameInput2').val();
 			var className = $('#classNameInput2').val();
-			var pin = $('.inputPasswordTs').val();
+			var pin = "";
+			$('.inputPasswordTs').each(function() {
+				pin += $(this).val();
+			});
+
+
 			var regCheck = /^\d+$/;
 			if(regCheck.test(fname) || regCheck.test(lname) || fname.length < 2 || lname.length < 2)
 				alert('Please enter a valid name.');
