@@ -73,6 +73,9 @@ body {
 .block, .container {
 
 }
+.move-right {
+    left: 10vh;
+}
 .block {
 	height: 100%;
 	width: 100%;
@@ -272,7 +275,7 @@ body {
     left: 6vh;
     position: fixed;
 }
-    .panel-button-group {
+.panel-button-group {
     position: fixed;
     bottom: 0%;
     left: 6vh;
@@ -287,6 +290,9 @@ body {
     background-color: #fff;
     color: #333;
     height: 100vh;
+}
+.box {
+    left: 0;
 }
 }
 @media screen and (max-width: 780px) {
@@ -307,6 +313,9 @@ body {
 }
 .generate-button {
     top: 84vh;
+}
+.box {
+    left: 0;
 }
 }
 .nopadding {
@@ -343,4 +352,31 @@ input[type=password] {
 #pinTitle {
   z-index: 4;
   color: white;
+}
+<<<<<<< HEAD
+
+
+#createSessionForm{
+    overflow: hidden;
+=======
+.button-1 {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    height: 200% !important;
+}
+.nopadding-bottom {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+@media screen and (min-width: 1016px) {
+    .box {
+    left: 15vh;
+}
+}
+#status  {
+    float: right;
+}
+.navbar-text {
+    padding-right: 20px;
+>>>>>>> 28ec37c2ba2b37149a2ac1a5ed34892d844f7c24
 }

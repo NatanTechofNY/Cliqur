@@ -1,33 +1,27 @@
 <template name="crowd_session">
-<!--
-<div id="pinDiv">
-<center>
-<form id="pinForm">
-<h3 id="pinTitle">Session is pin protected. Enter four-digit pin # to continue</h3>
-    <input type="password" name="pinpw"  maxlength="1" />
-    <input type="password" name="pinpw"  maxlength="1" />
-    <input type="password" name="pinpw" maxlength="1" />
-    <input type="password" name="pinpw"  maxlength="1" />
-    <br><br>
-    <button class="btn btn-default">Submit</button>
-</form>
-</center>
-</div>-->
     <nav class="navbar navbar-default">
-  <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        AnswerMe Students
-        </a>
-        <p class="navbar-text">Signed in as {{userName}}</p>
-        <buttom class="btn btn-danger btn-lg navbar-right" style="z-index:1;">Exit Session</buttom>
-  </div>
-</nav>
-<div class="container"><br>
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            AnswerMe Students
+            </a>
+            <buttom class="btn btn-danger btn-lg navbar-right" style="z-index:1;">Exit Session</buttom>
+            <p class="navbar-text navbar-right">Signed in as {{userName}}</p>
+            <label id="status" class="navbar-text navbar-right"></label>
+
+      </div>
+    </nav>
+
+<div class="container box">
 <div class="jumbotron">
-    <center>
-      <h1>Question placeholder?!?!?</h1>
-    </center>
+  <div class="row">
+    <div class="col-md-12">
+        <center>
+          <h1></h1>
+        </center>
+      </div>
     </div>
+  </div>
+
       <div class="row">
         <div class="col-md-offset-2 col-md-8 col-md-offset-2">
           <div class="container-fluid">
@@ -45,20 +39,21 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12 col-xs-12 text-center">
+              <div class="col-md-12 col-xs-12 text-center nopadding-bottom">
                 <label class="control-label text-center response-label">Multiple Choice Response</label>
               </div>
+              
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button"><h2>A</h2></button>
+                <button class="btn btn-defaul student-response-button" id="mc"><h2>A</h2></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button"><h2>B</h2></button>
+                <button class="btn btn-defaul student-response-button" id="mc"><h2>B</h2></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button"><h2>C</h2></button>
+                <button class="btn btn-defaul student-response-button" id="mc"><h2>C</h2></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button"><h2>D</h2></button>
+                <button class="btn btn-defaul student-response-button" id="mc"><h2>D</h2></button>
               </div>
             </div>
           </div>
