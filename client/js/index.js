@@ -47,6 +47,11 @@ if (Meteor.isClient) {
 		
 					
 		}]);
+		angular.module("indexApp").controller("publicCtrl", ['$scope', function($scope){
+					$scope.contentName = "public";
+		
+					
+		}]);
 	   
 	   
 	   
