@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #leftblock {
 	background-color: #247BA0;
 	left: 0%;
@@ -17,6 +18,9 @@
 	height: 100%;
 	width: 100%;
 	left: 80%;
+}
+body {
+    background-color: #b2dbbf;
 }
 .block, .container {
     position: absolute;
@@ -130,7 +134,7 @@
     left: 50vh;
 }
 .btn-lg {
-    width: 200px;
+    width: 150px;
     padding: 20px;
     margin-right: 20px
 }
@@ -147,11 +151,47 @@
     height: 100px;
 }
 .student-input {
-    top: 40%;
-    width: 30%;
-    position: fixed;
+    width: 100%;
+    height: 70px;
+    
 }
-.student-response-group {
-    position: absolute;
-    top: 50%;
+.student-qa-button {
+    width: 100%;
+    height: 50px;
+}
+.qa-button-group {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.response-area {
+    top: 20vh;
+    position: relative;
+    padding-bottom: 20px;
+}
+.student-response-button {
+    width: 100%;
+}
+.student-response-button:hover {
+    background-color: red;
+}
+.response-label {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.public-display {
+    height: 82vh;
+    width: 100%;
+    overflow: scroll;
+}
+.public-display li {
+    font-size: 300%;
+    padding: 50px;
+}
+.public-poll {
+    height: 88vh;
+    width: 100%;
+}
+.padding-top {
+   padding-top: 20px;
 }

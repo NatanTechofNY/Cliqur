@@ -1,37 +1,50 @@
 <template name="crowd_session">
-  <div>
-
     <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">
-            AnswerMe Students
-            </a>
-            <buttom class="btn btn-danger btn-lg navbar-right">Exit Session</buttom>
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        AnswerMe Students
+        </a>
+        <p class="navbar-text">Signed in as {{userName}}</p>
+        <buttom class="btn btn-danger btn-lg navbar-right">Exit Session</buttom>
+  </div>
+</nav>
+<div class="container-fluid response-area">
+  <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+          <div class="container-fluid">
+            <input class="student-input" type="text" name="" placeholder="Input your questions here">
+            <div class="row qa-button-group">
+              <div class="col-md-6">
+                <button class="btn btn-success student-qa-button">
+                  Fire
+                </button>
+              </div>
+              <div class="col-md-6">
+                <button class="btn btn-warning student-qa-button">
+                  Clear
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-md-12 col-xs-12 control-label text-center response-label">Multiple Choice Response</label>
+              <div class="col-md-3 col-xs-3">
+                <button class="btn btn-defaul student-response-button">A</button>
+              </div>
+              <div class="col-md-3 col-xs-3">
+                <button class="btn btn-defaul student-response-button">B</button>
+              </div>
+              <div class="col-md-3 col-xs-3">
+                <button class="btn btn-defaul student-response-button">C</button>
+              </div>
+              <div class="col-md-3 col-xs-3">
+                <button class="btn btn-defaul student-response-button">D</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-    <div class="row">
-      <div class="col-md-8">
-        <input class="form-control student-input" placeholder="Enter your questions here!">
-      </div>
-    </div>
-    <div class="row student-response-group">
-      <div class="col-md-2 col-md-offset-2">
-        <button class="btn btn-success">Fire</button>
-      </div>
-      <div class="col-md-2">
-        <button class="btn btn-default">A</button>
-      </div>
-      <div class="col-md-2">
-        <button class="btn btn-default">B</button>
-      </div>
-      <div class="col-md-2">
-        <button class="btn btn-default">C</button>
-      </div>
-      <div class="col-md-2">
-        <button class="btn btn-default">D</button>
-      </div>
-    </div>
-  </div>
+   </div>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 </template>
