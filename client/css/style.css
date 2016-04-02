@@ -223,8 +223,8 @@ body {
     height: 50px;
 }
 .qa-button-group {
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 .response-area {
     top: 20vh;
@@ -235,7 +235,8 @@ body {
     width: 100%;
 }
 .student-response-button:hover {
-    background-color: red;
+    background-color: #2ec4b6;
+    color: #fff;
 }
 .response-label {
     padding-top: 30px;
