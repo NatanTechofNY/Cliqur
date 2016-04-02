@@ -7,108 +7,91 @@
 </head>
 
 
-<template id = "fullView"  name="indexItem">
-	<section class="block">
-		<div id = "right-container">
-			<div class = "row" id = "firstrow">
-				<div id = "rightblock" class="col-sm-16 col-md-12"> 
-						<input class="form-control" id = "codeInput" placeholder="Enter class code here!">
-						<button class="btn btn-default btn-block" id="joinSessionBtn">Join Session</button>
-				   </div>
-				</div>
-	</div>
-		<div id = "left-container">
-		<div class = "row">
-         <div id = "leftblock" class="col-md-13 col-sm-16">
-         	<button class="btn btn-default btn-lg" id="createSessionBtn">Create Session</button>
-         
-			</div>
-          </div> 
-			</div>
-
-        
+<template name="indexItem">
+    <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9 col-md-6 col-lg-8 " style="background-color:#EF6C00;height:1000px;z-index:0">
+    <input class="form-control" type="text" id = "codeInput" placeholder="Enter class code here!">
+                  <button class="btn btn-default btn-block" data-toggle="modal" data-target="#joinSession"  id="joinSessionBtn">Join Session</button>
+    </div>
+    <div class="col-sm-3 col-md-6 col-lg-4" style="background-color:#00897B;height:1000px;z-index:0">
+      <button class="btn btn-default btn-block" data-toggle="modal" data-target="#createSession"  id="createSessionBtn">Create Session</button>
+    </div>
+  </div>
+</div>
+    
        
-      </section>
 
 
 
 
-  {{#if toJoinSession}}
-    <div class = "join-panel">
-      <a onclick="window.location.reload()">&times;</a>
-      <h1 class="text-center">Join a Session: {{toJoinSession}}</h1>
-      <div class="container">
-        <div class="jumbotron">
-              <form class="form-horizontal" id="toJoinForm">
-            <div class="form-group">
-            <label for="" class="col-sm-2 control-label">Print Name:</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="firstNameInput" placeholder="First Name">
-            </div>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="lastNameInput" placeholder="Last Name">
-            </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="col-sm-2 control-label">Student ID #:</label>
-              <div class="col-sm-10">
-                <input  type="text" class="form-control" id="studentId" placeholder="Student ID No.">
-              </div>
-              </div>
-              <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-default">Continue</button>
-              </div>
-            </div>
-          </form>
-        </div>
+<div class="modal fade join-panel" id="joinSession" tabindex="-1" role="dialog" aria-labelledby="joinSession">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Join a Session: {{toJoinSession}}</h4>
+      </div>
+      <div class="modal-body">
+        <form id="toJoinForm">
+          <div class="form-group">
+            <label for="firstNameInput" class="control-label">First Name:</label>
+            <input type="text" class="form-control" id="firstNameInput">
+          </div>
+          <div class="form-group">
+            <label for="lastNameInput" class="control-label">Last Name:</label>
+            <input type="text" class="form-control" id="lastNameInput">
+          </div>
+          <div class="form-group">
+            <label for="studentId" class="control-label">Student ID No.:</label>
+            <input type="text" class="form-control" id="studentId">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Continue</button>
       </div>
     </div>
-  {{else}}
-    {{#if toCreateSession}}
-        <section class = "create-panel">
-          <a onclick="window.location.reload()">&times;</a>
-          <h1 class="text-center header-text">Create Your Session</h1>
-          <div class="container">
-            <div class="jumbotron">
-              <form id="createSessionForm" name="myForm" class="form-horizontal">
-                <div class="form-group">
-                  <label for="" class="col-sm-2 control-label">Your Name</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="firstNameInput2" placeholder="Your First Name">
-                  </div>
-                  <br>
-                  <div class="col-md-offset-2 col-sm-10">
-                    <input type="text" class="form-control" id="lastNameInput2" placeholder="Your Last Name">
-                  </div>
-                </div>
-                <div class="form-group required">
-                  <label for="" class="col-sm-2 control-label">Class Name&#42;</label>
-                  <div class="col-sm-10">
-                    <input name = "className" type="text" class="form-control" id="classNameInput2" placeholder="Your Class Name" required>
-                    <span class="help-inline"></span>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Passcode</label>
-                  <div class="col-sm-2">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Create a 4-digit code">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-sm-offset-5 col-sm-2 button-a" >
-                    <button type="submit" class="btn btn-default btn-lg">Create Session</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            
+  </div>
+</div>
+<div class="modal fade" id="createSession" tabindex="-1" role="dialog" aria-labelledby="createSession">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Create a Session</h4>
+      </div>
+      <div class="modal-body">
+        <form id="createSessionForm">
+          <div class="form-group">
+            <label for="firstNameInput2" class="control-label">First Name:</label>
+            <input type="text" class="form-control" id="firstNameInput2">
           </div>
-        </section>
-
-
-    {{/if}}
-  {{/if}}
+          <div class="form-group">
+            <label for="lastNameInput2" class="control-label">Last Name:</label>
+            <input type="text" class="form-control" id="lastNameInput2">
+          </div>
+          <div class="form-group">
+            <label for="classNameInput2" class="control-label">Class Name:</label>
+            <input type="text" class="form-control" id="classNameInput2">
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="control-label">Passcode (Optional):</label>
+              <input type="password" class="form-control" id="inputPassword" max="1">
+              <input type="password" class="form-control" id="inputPassword" max="1">
+              <input type="password" class="form-control" id="inputPassword" max="1">
+              <input type="password" class="form-control" id="inputPassword" max="1">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
