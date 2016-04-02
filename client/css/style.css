@@ -353,12 +353,10 @@ input[type=password] {
   z-index: 4;
   color: white;
 }
-<<<<<<< HEAD
-
 
 #createSessionForm{
     overflow: hidden;
-=======
+}
 .button-1 {
     padding-top: 25px !important;
     padding-bottom: 25px !important;
@@ -378,5 +376,4 @@ input[type=password] {
 }
 .navbar-text {
     padding-right: 20px;
->>>>>>> 28ec37c2ba2b37149a2ac1a5ed34892d844f7c24
 }
