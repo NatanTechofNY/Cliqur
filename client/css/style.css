@@ -68,7 +68,7 @@ body {
 /*iphone*/
 @media screen and (min-width: 320px) {
     .fix-button-left {
-        height: 50px;
+    height: 50px;
     width: 80%;
     top: 20vh;
       left: 4%;
@@ -155,7 +155,7 @@ body {
 }
 .generate-button {
     position: relative;
-    top: 70%;
+    top: 76%;
     border-radius: 0px;
     height: 100px;
 }
@@ -207,7 +207,6 @@ body {
 .padding-top {
    padding-top: 20px;
 }
-<<<<<<< HEAD
 .slide {
     padding-top: 30px;
     height: 81vh;
@@ -216,6 +215,9 @@ body {
     position: fixed;
 }
 @media screen and (max-width: 450px) {
+    body {
+        height: 100%;
+    }
     .slide {
         padding-top: 30px;
     height: 81vh;
@@ -231,11 +233,18 @@ body {
     padding: 0px;
     margin: 0px;
 }
+.generate-button {
+    bottom: 70vh;
+}
+#sidebar-wrapper {
+    height: 100vh;
+}
+}
 @media screen and (max-width: 780px) {
     .slide {
     padding-top: 30px;
     height: 81vh;
-    width: 90%;
+    width: 100%;
     left: 0vh;
     position: fixed;
 }
@@ -243,16 +252,19 @@ body {
     position: fixed;
     bottom: 0%;
     left: 0vh;
-    width: 90%;
+    width: 100%;
     padding: 0px;
     margin: 0px;
+}
+.generate-button {
+    top: 84vh;
 }
 }
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
    border-radius: 0px;
-=======
+}
 #pinDiv {
   z-index: 2;
   background-color: rgba(0,0,0, 0.9);
@@ -282,5 +294,4 @@ input[type=password] {
 #pinTitle {
   z-index: 4;
   color: white;
->>>>>>> 859ced66ab0353ab53f0893253faa79682afa1aa
 }
