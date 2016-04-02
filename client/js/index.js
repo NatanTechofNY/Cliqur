@@ -6,9 +6,9 @@ if (Meteor.isClient) {
 
 	Template.indexItem.events({
 		'click #joinSessionBtn': function () {
-			var classCode = $('#codeInput').val();
+			var classCode = $('#condeInput').val();
 			var regCheck = /^[a-z0-9]+$/i;
-			if(typeof classCode !== 'string' && classCode.length !== 6)
+			if(typeof classCode !== 'string' || classCode.length !== 6)
 				alert('Session ID must be 6 characters.');
 			else if (!regCheck.test(classCode))
 				alert('Invalid session ID.');

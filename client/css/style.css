@@ -39,11 +39,7 @@
 	height: 100% !important;
 }
 #createSessionBtn {
-	height: 5% !important;
-	width: 30% !important;
-	background-color: white;
-	color: black;
-	border-radius: 1px;
+    left: 50vh;
 	
 }
 #codeInput {
@@ -54,17 +50,6 @@
 	height: 6% !important;
 	
 }
-#joinSessionBtn{
-	position: relative !important;
-	top: 4% !important;
-	margin: auto !important;
-	width: 30% !important;
-	height: 4.5% !important;
-	background-color: black;
-	color: white;
-	border: none;
-	border-radius: 1px !important;
-	}
 
 .move-right {
     left: 10vh;
@@ -376,4 +361,10 @@ input[type=password] {
     font-weight: 700;
     padding-right: 5px;
     padding-left: 5px;
+}
+.index-container input {
+    height: 72px;
+}
+.index-container {
+ padding-top: 30vh;
 }
