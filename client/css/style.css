@@ -211,7 +211,13 @@ body {
 .btn-success {
 	
 }
-.container-box, .jumbotron {
+.container{
+	height: 130%;
+	width: 100%;
+	background-color: #0E0E15;
+	border: 2px solid red;
+}
+.jumbotron {
 	margin-top: 3% !important;
 }
 .student-response {
@@ -226,11 +232,6 @@ body {
 	border: 1px solid #BDBDBD;
     
 }
-.student-qa-button {
-    width: 100%;
-    height: 50px;
-	border-radius: 2px !important;
-}
 .qa-button-group {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -240,13 +241,24 @@ body {
     position: relative;
     padding-bottom: 20px;
 }
+.student-qa-button {
+    width: 60%;
+	color: white;
+	border: 1px solid white;
+	border-radius: 4px;
+	height: 45px;
+	background-color: transparent;	
+}
+.student-qa-button:hover {
+	border-color: #4CAF50;
+}
 .student-response-button {
     width: 100%;
 	color: white;
-	border-radius: 2px;
-	border: none;
-	background-color: #F57F17;
+	background-color: red;
+	
 }
+
 #mc {
 	font-size: 13px !important;
 	background-color: #263238;
@@ -281,8 +293,9 @@ body {
    padding-top: 20px;
 }
 #login-name {
+	color: white;
 	position: relative;
-	top: 1% !important;
+	top: 5% !important;
 }
 .slide {
     padding-top: 30px;
@@ -344,7 +357,7 @@ body {
 .box {
     left: 0;
 }
-}
+	}
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
@@ -397,10 +410,26 @@ input[type=password] {
     .box {
     left: 15vh;
 }
-}
+	}
 #status  {
     float: right;
 }
+.navbar {
+	background-color: transparent;
+	border-radius: 0px !important;
+}
 .navbar-text {
     padding-right: 20px;
+	color: white;
+}
+.navbar-brand {
+	color: #BDBDBD;
+}
+.navbar-brand: hover {
+	color: white;
+}
+.exit {
+	background-color: #FF7043;
+	height: 40%;
+	width: 12%;
 }

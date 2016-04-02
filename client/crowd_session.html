@@ -1,11 +1,11 @@
 <template name="crowd_session">
-    <nav class="navbar navbar-default">
+    <nav class="navbar">
       <div class="container-fluid">
           <a class="navbar-brand" href="#">
             AnswerMe Students
             </a>
-            <buttom class="btn btn-danger btn-lg navbar-right" style="z-index:1;" id="endssn">Exit Session</buttom>
-            <p id = "login-name" class="navbar-text navbar-right">Signed in as {{userName}}</p>
+            <buttom class="exit navbar-right" style="z-index:1;" id="endssn">Exit Session</buttom>
+            <p id = "login-name" class="navbar-right">Signed in as {{userName}}</p>
             <label id="status" class="navbar-text navbar-right"></label>
 
       </div>
@@ -28,12 +28,12 @@
             <input class="student-input" type="text" name="" placeholder="Enter your question here...">
             <div class="row qa-button-group">
               <div class="col-md-6">
-                <button class="btn btn-warning student-qa-button student-response-button">
+                <button class="student-qa-button">
                   Send question
                 </button>
               </div>
               <div class="col-md-6">
-                <button class="btn student-response-button btn-warning student-qa-button">
+                <button class="student-qa-button ">
                   Clear
                 </button>
               </div>
@@ -44,16 +44,16 @@
               </div>
               
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button" id="mc"><h3>A</h3></button>
+                <button class="student-response-button" id="mc"><h3>A</h3></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button" id="mc"><h3>B</h3></button>
+                <button class="student-response-button" id="mc"><h3>B</h3></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button" id="mc"><h3>C</h3></button>
+                <button class="student-response-button" id="mc"><h3>C</h3></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button" id="mc"><h3>D</h3></button>
+                <button class="student-response-button" id="mc"><h3>D</h3></button>
               </div>
             </div>
           </div>
