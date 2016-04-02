@@ -51,6 +51,7 @@
 	
 }
 
+}
 .move-right {
     left: 10vh;
 }
@@ -186,17 +187,28 @@
     border-radius: 0px;
     height: 100px;
 }
+.btn-success {
+	
+}
+.container-box, .jumbotron {
+	margin-top: 3% !important;
+}
 .student-response {
     height: 100px;
 }
 .student-input {
+	font-size: 18px !important;
+	padding-left: 5px;
+	padding-right: 5px;
     width: 100%;
     height: 70px;
+	border: 1px solid #BDBDBD;
     
 }
 .student-qa-button {
     width: 100%;
     height: 50px;
+	border-radius: 2px !important;
 }
 .qa-button-group {
     padding-top: 25px;
@@ -209,30 +221,47 @@
 }
 .student-response-button {
     width: 100%;
+	color: white;
+	border-radius: 2px;
+	border: none;
+	background-color: #F57F17;
+}
+#mc {
+	font-size: 13px !important;
+	background-color: #263238;
+	
+}
+#mc:hover {
+	color: #536DFE;
 }
 .student-response-button:hover {
-    background-color: #2ec4b6;
     color: #fff;
 }
 .response-label {
+	width: 400px;
     padding-top: 30px;
     padding-bottom: 10px;
 }
 
 .public-display {
-    height: 42vh;
+    height: 82vh;
     width: 100%;
+    overflow: scroll;
 }
 .public-display li {
     font-size: 300%;
     padding: 50px;
 }
 .public-poll {
-    height: 38vh;
+    height: 88vh;
     width: 100%;
 }
 .padding-top {
    padding-top: 20px;
+}
+#login-name {
+	position: relative;
+	top: 1% !important;
 }
 .slide {
     padding-top: 30px;
