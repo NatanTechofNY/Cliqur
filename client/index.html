@@ -3,21 +3,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+
   <title>AnswerMe</title>
 </head>
 
 
-<template name="indexItem">
+<template id = "fullView"  name="indexItem">
 	<section class="block">
-		<div id = "rightblock" class="col-md-6"> 
-                <input class="form-control" id = "codeInput" placeholder="Enter class code here!">
-                <button class="btn btn-default btn-block" id="joinSessionBtn">Join Session</button>
-              </div>
-         <div id = "leftblock" class="col-md-6 col-sm-10 button-padding">
+		<div id = "right-container">
+			<div class = "row" id = "firstrow">
+				<div id = "rightblock" class="col-sm-3 col-md-6"> 
+						<input class="form-control" id = "codeInput" placeholder="Enter class code here!">
+						<button class="btn btn-default btn-block" id="joinSessionBtn">Join Session</button>
+				   </div>
+				</div>
+	</div>
+		<div id = "left-container">
+		<div class = "row" id = 'rowleft'>
+         <div id = "leftblock" class="col-md-13 col-sm-12 button-padding">
          	<button class="btn btn-default btn-lg" id="createSessionBtn">Create Session</button>
-         </div>
-              
-           
+         
+			</div>
+          </div> 
+			</div>
+
         
        
       </section>
