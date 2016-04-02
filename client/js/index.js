@@ -9,9 +9,9 @@ if (Meteor.isClient) {
 			var classCode = $('#codeInput').val();
 			var regCheck = /^[a-z0-9]+$/i;
 			if(typeof classCode !== 'string' && classCode.length !== 6)
-				alert('Session ID must be 6 characters.');
+				return alert('Session ID must be 6 characters.');
 			else if (!regCheck.test(classCode))
-				alert('Invalid session ID.');
+				return alert('Invalid session ID.');
 			else
 				Session.set('toJoinSession', classCode);
 
@@ -36,9 +36,9 @@ if (Meteor.isClient) {
 			var stdntId = $('#studentId').val();
 			var regCheckName = /^\d+$/;
 			if(regCheckName.test(fname) || regCheckName.test(lname) || fname.length < 2 || lname.length < 2)
-				alert('Please enter a valid name.');
+				return alert('Please enter a valid name.');
 			else if (stdntId.length < 2)
-				alert('Please enter a valid student ID');
+				return alert('Please enter a valid student ID');
 
 
 			function tempEndCall(datter) {
@@ -49,7 +49,7 @@ if (Meteor.isClient) {
 					pinr: datter
 				}, function(err, data) {
 					if(err)
-						alert(err.error);
+						return alert(err.error);
 					else {
 						updateSess(data, 'userId');
 						updateSess(classCode, 'sessionId');
@@ -60,7 +60,7 @@ if (Meteor.isClient) {
 
 			Meteor.call('sesHasPin', classCode, function (e, rs) {
 				if (e) {
-					alert('Error finding session');
+					return alert('Error finding session');
 				}
 				else{
 					if(rs) {
@@ -78,6 +78,7 @@ if (Meteor.isClient) {
 								pinstr += $(this).val();
 							});
 							tempEndCall(pinstr);
+							$('#pinDiv').fadeOut(900);
 						});
 					}
 					else tempEndCall(undefined);
@@ -99,12 +100,12 @@ if (Meteor.isClient) {
 
 			var regCheck = /^\d+$/;
 			if(regCheck.test(fname) || regCheck.test(lname) || fname.length < 2 || lname.length < 2)
-				alert('Please enter a valid name.');
+				return alert('Please enter a valid name.');
 			else if (className.length < 2)
-				alert('Class name must be longer then two characters');
+				return alert('Class name must be longer then two characters');
 			else if(pin.length) {
 				if(!regCheck.test(pin) && pin.length != 4)
-					Meter.Error('Pin can only be 4 digits.');
+					return alert('Pin can only be 4 digits.');
 			}
 
 			Meteor.call("addUser", {
@@ -112,12 +113,12 @@ if (Meteor.isClient) {
 				studentId: "SessionOwner",
 			}, function(err, data) {
 				if(err)
-					alert(err.error);
+					return alert(err.error);
 				else {
 					Meteor.call('createSession', {sessionOwnerId: data, sessionName: className, pin: !pin.length? undefined: pin, studentId: "SessionOwner"}, 
 					function(err, d2) {
 						if(err)
-							alert(err.error);
+							return alert(err.error);
 						else{
 							updateSess(data, 'userId');
 							updateSess(d2, 'sessionId');

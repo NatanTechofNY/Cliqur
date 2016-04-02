@@ -9,9 +9,10 @@ if Meteor.isClient
 	Tracker.autorun(->
 		sessr = Session.get 'userSessItem'
 		if sessr && sessr.userId
-			Meteor.subscribe 'userDoc', sessr.userId
+			Meteor.subscribe('userDoc', sessr.userId)
 		if sessr && sessr.sessionId
-			Meteor.subscribe 'sessionData', sessr.sessionId
+			Meteor.subscribe('sessionData', sessr)
 		
+
 		
 	)
