@@ -371,3 +371,9 @@ input[type=password] {
     left: 15vh;
 }
 }
+#status  {
+    float: right;
+}
+.navbar-text {
+    padding-right: 20px;
+}

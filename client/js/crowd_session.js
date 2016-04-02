@@ -13,9 +13,10 @@ if (Meteor.isClient) {
        		window.location.href = "/";
        	},
        	'click #mc': function() {
-			    var x = document.getElementById("status");
-			    setTimeout(function(){ x.value="Your response has been sent" }, 2000);
-			}
-		})
-       	};
-
+       		document.getElementById('status').innerHTML='Your response has been sent'
+       		setTimeout(function() {
+       			document.getElementById('status').innerHTML=''
+			}, 2000);
+		}
+    });
+};
