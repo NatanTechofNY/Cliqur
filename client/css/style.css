@@ -134,8 +134,8 @@ body {
 .panel-button-group {
     position: absolute;
     bottom: 0%;
-    left: 50vh;
-    width: 70%;
+    left: 20vh;
+    width: 90%;
     padding: 0px;
     margin: 0px;
 }
@@ -148,7 +148,6 @@ body {
 .btn-lg {
     width: 150px;
     padding: 20px;
-    margin-right: 20px
 }
 .student-item {
     color: #333;
@@ -209,9 +208,9 @@ body {
 }
 .slide {
     padding-top: 30px;
-    height: 81vh;
-    width: 70%;
-    left: 50vh;
+    height: 82vh;
+    width: 90%;
+    left: 20vh;
     position: fixed;
 }
 @media screen and (max-width: 450px) {
