@@ -26,9 +26,12 @@ if (Meteor.isClient) {
               "body": questionBody
             };
             Meteor.call('sendQuestion', obj, function(e) {
+              document.querySelector('textarea[name="questionInput"]').disabled = false;
               if (e) {
                 alert(e.error);
-              };
+              }
+              else
+                document.querySelector('textarea[name="questionInput"]').value = "";
             });
           }
           else $('textarea[name="questionInput"]').select();
