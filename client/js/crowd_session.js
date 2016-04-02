@@ -1,8 +1,8 @@
 if (Meteor.isClient) {
 
-	angular.module('createSessionApp', []);
+	
  
-    angular.module('createSessionApp').controller('createCtrl', ['$scope', function($scope){
+    angular.module('publicApp').controller('createCtrl', ['$scope', function($scope){
         Meteor.subscribe('adminQuestions', {parentSessionId: sessionId});
         //questions ng-repeat
         $scope.questionsFull = Questions.find().fetch(); //gets returned in an array of objects, formatted on brackets page

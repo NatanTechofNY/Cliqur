@@ -1,6 +1,7 @@
   
+if (Meteor.isClient) {
 
-    angular.module('createRegApp', []);
+	  angular.module('createRegApp', []);
  
     angular.module('createRegApp').controller('createCtrl', ['$scope', function($scope){
      
@@ -14,5 +15,7 @@
         }
        
    }]);
+};
+  
    
 
