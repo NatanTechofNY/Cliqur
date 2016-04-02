@@ -4,7 +4,12 @@ if (Meteor.isClient) {
        	'click #endssn': function() {
        		Session.setPersistent('userSessItem', {});
        		window.location.href = "/";
-       	}
-	});
-}
-
+       	},
+       	'click #mc': function() {
+       		document.getElementById('status').innerHTML='Your response has been sent'
+       		setTimeout(function() {
+       			document.getElementById('status').innerHTML=''
+			}, 2000);
+		}
+    });
+};
