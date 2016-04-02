@@ -28,7 +28,7 @@ if (Meteor.isClient) {
 			var regCheckName = /^\d+$/;
 			if(regCheckName.test(fname) || regCheckName.test(lname) || fname.length < 2 || lname.length < 2)
 				alert('Please enter a valid name.');
-			else if (studentId.length < 2)
+			else if (stdntId.length < 2)
 				alert('Please enter a valid student ID');
 
 
