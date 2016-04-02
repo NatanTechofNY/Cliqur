@@ -1,18 +1,18 @@
- <head ng-app="indexApp">
+ <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AnswerMe</title>
   </head>
-  <body>
-    <section ng-controller = "indexCtrl" class="block" ng-show = "showContent(name)">
+  <body ng-app="indexApp">
+    <section ng-controller="indexCtrl" class="block" ng-show = "swag">
       <div class="row">
         <div class="col-md-offset-1 col-md-10 col-md-offset-1"> <!-- block -->
           <div class="row">
             <div class="col-md-6 col-sm-10 button-padding">
-              <button class="btn btn-default btn-lg" ng-controller="buttonCtrl"><a href="create_reg.html">Create Session {{name}}</a></button>
+              <button class="btn btn-default btn-lg"><a href="create_reg.html">Create Session {{name}}</a></button>
             </div>
-            <div class="col-md-6" ng-controller="MyCtrl"> 
+            <div class="col-md-6"> 
               <input class="form-control" id = "codeInput" placeholder="Enter class code here!">
               <button class="btn btn-default btn-block" ng-click = enterCode()>Join Session</button>
             </div>

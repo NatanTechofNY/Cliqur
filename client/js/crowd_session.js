@@ -1,7 +1,7 @@
 if (Meteor.isClient) {
 
-	
- 
+	angular.module('publicApp', ['ui.router', 'angular-meteor'])
+    
     angular.module('publicApp').controller('createCtrl', ['$scope', function($scope){
         Meteor.subscribe('adminQuestions', {parentSessionId: sessionId});
         //questions ng-repeat

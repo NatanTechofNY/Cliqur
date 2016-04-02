@@ -14,9 +14,10 @@ tracker                 # Meteor's client-side reactive programming library
 standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 
-autopublish             # Publish all data to the clients (for prototyping)
-insecure                # Allow all DB writes from clients (for prototyping)
 angular
 aldeed:simple-schema
 aldeed:collection2
-kadira:flow-router
+dotansimha:angular-reactive-component
+urigo:angular-ui-router
+coffeescript
+u2622:persistent-session
