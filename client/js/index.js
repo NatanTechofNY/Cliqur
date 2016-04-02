@@ -16,8 +16,11 @@ if (Meteor.isClient) {
 				Session.set('toJoinSession', classCode);
 
 		},
-		'click #createSessionBtn': function() {
+		'click #createSessionBtn': function() {	
+			
 			Session.set('toCreateSession', true);	
+			
+			
 		},
 		'submit #toJoinForm': function(e) {
 			e.preventDefault();

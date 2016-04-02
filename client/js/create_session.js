@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-       Template.create_session.events({
+    Template.create_session.events({
        	'click #menu-toggle': function(e) {
        		e.preventDefault();
        		$('#wrapper').toggleClass("toggled");
@@ -8,5 +8,5 @@ if (Meteor.isClient) {
        		Session.setPersistent('userSessItem', {});
        		window.location.href = "/";
        	}
-       });
+    });
 }

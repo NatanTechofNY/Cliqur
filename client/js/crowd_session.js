@@ -7,7 +7,11 @@ if (Meteor.isClient) {
 		      var input_flds = $this.closest('form').find(':input');
 		      input_flds.eq(input_flds.index(e.currentTarget) + 1).focus();
 		    }
-		}
+		},
+       	'click #endssn': function() {
+       		Session.setPersistent('userSessItem', {});
+       		window.location.href = "/";
+       	}
 	});
 }
 

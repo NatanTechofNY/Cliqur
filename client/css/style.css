@@ -46,7 +46,7 @@
 	background-color: #00897B;
 	color: white;
 	border-radius: 1px !important;
-	font-family: Work Sans;
+	
 }
 #codeInput {
 	font-size: 14px;
@@ -54,7 +54,7 @@
 	width: 60%;
 	height: 17% !important;
 	margin-bottom: 3%;
-	font-family: Work Sans;
+	
 }
 #joinSessionBtn{
 	position: relative !important;
@@ -65,7 +65,11 @@
 	color: white;
 	border: none;
 	border-radius: 1px !important;
-	font-family: Work Sans;
+	
+}
+.create-panel {
+	z-index: 999;
+	margin-left: 7% !important;
 }
 body {
 	overflow-x: hidden;
@@ -107,6 +111,10 @@ body {
       background-color: #fff;
       position: relative;
       z-index: 999;
+}
+.control-label {
+	width: 20%;
+	height: 12%;
 }
 
 /*iphone*/
