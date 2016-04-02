@@ -39,13 +39,11 @@
 	height: 100% !important;
 }
 #createSessionBtn {
-	margin-left: 33% !important;
-	margin-top: 77% !important;
 	height: 5% !important;
 	width: 30% !important;
 	background-color: white;
 	color: black;
-	border-radius: 1px !important;
+	border-radius: 1px;
 	
 }
 #codeInput {
@@ -66,17 +64,8 @@
 	color: white;
 	border: none;
 	border-radius: 1px !important;
-	
-}
-.create-panel {
-}
-body {
-	overflow: hidden;
-}
-.block, .container {
-    position: absolute;
+	}
 
-}
 .move-right {
     left: 10vh;
 }
@@ -246,16 +235,15 @@ body {
 }
 
 .public-display {
-    height: 82vh;
+    height: 42vh;
     width: 100%;
-    overflow: scroll;
 }
 .public-display li {
     font-size: 300%;
     padding: 50px;
 }
 .public-poll {
-    height: 88vh;
+    height: 38vh;
     width: 100%;
 }
 .padding-top {
@@ -357,6 +345,7 @@ input[type=password] {
   z-index: 4;
   color: white;
 }
+
 
 
 
