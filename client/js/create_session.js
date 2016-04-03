@@ -43,9 +43,16 @@ if (Meteor.isClient) {
        		};
        	},
        	'click #changeToThisPublic': function(e) {
-       		Meteor.call('toggleQuestion', {target: true, questionId: $('input[name="optionsRadios"]:checked').val(), sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (err, res) {
+       		Meteor.call('unsetAllQuestions', {target: true, questionId: $('input[name="optionsRadios"]:checked').val(), sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (err, res) {
        			if (err) {
        				alert(err.error);
+       			}
+       			else{
+       				Meteor.call('toggleQuestion', {target: true, questionId: $('input[name="optionsRadios"]:checked').val(), sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (err, res) {
+		       			if (err) {
+		       				alert(err.error);
+		       			};
+		       		});
        			};
        		});
        	},

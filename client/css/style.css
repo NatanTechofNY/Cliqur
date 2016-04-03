@@ -1,3 +1,6 @@
+#sidebar-wrapper{
+  display: none;
+}
 .row {
 	background-color: transparent !important;
 }
