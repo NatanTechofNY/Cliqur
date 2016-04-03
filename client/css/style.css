@@ -219,7 +219,7 @@
    border-radius: 0px;
 }
 #pinDiv {
-  z-index: 2;
+  z-index: 9997;
   background-color: rgba(0,0,0, 0.9);
   height: 100%;
   width: 100%;
@@ -241,11 +241,11 @@ input[type=password] {
     left: 50%;
     margin-top: -100px;
     margin-left: -200px;
-    z-index: 3;
+    z-index: 9998;
 }
 
 #pinTitle {
-  z-index: 4;
+  z-index: 9999;
   color: white;
 }
 
