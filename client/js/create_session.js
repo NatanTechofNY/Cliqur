@@ -43,14 +43,15 @@ if (Meteor.isClient) {
        		};
        	},
        	'click #changeToThisPublic': function(e) {
-			Meteor.call('toggleQuestion', {target: true, questionId: $('input[name="optionsRadios"]:checked').val(), sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (err, res) {
+			     Meteor.call('toggleQuestion', {target: true, questionId: $('input[name="optionsRadios"]:checked').val(), sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (err, res) {
        			if (err) {
        				alert(err.error);
-       			};
+       			} else
+            alert("Question has been publicly shared.");
        		});
        	},
        	'click #deleteThisQuestion': function() {
-       		if (confirm('are you sure?')) {
+       		if (confirm('Are you sure you want to delete this question?')) {
        			Meteor.call('removeQuestion', {questionId: $('input[name="optionsRadios"]:checked').val(), sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (err, res) {
 	       			if (err) {
 	       				alert(err.error);
@@ -58,6 +59,17 @@ if (Meteor.isClient) {
 	       		});
        		};
        	},
+        'click #resetPollBtn': function() {
+          if (confirm('Are you sure you want to reset the polls?')) {
+            Meteor.call('resetClickerData', {sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (e, res) {
+              if (e)
+                alert(e.error);
+              else{
+                alert('Polls reset!');
+              };
+            });
+          };
+        }
     });
     Template.create_session.helpers({
     	sessionId: function () {

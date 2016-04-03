@@ -120,11 +120,16 @@
 
 .container-box, .jumbotron {
 	margin-top: 3% !important;
-	overflow-y: hidden;
+	overflow:hidden !important;
 }
 .jumbotron {
+	height: 10% !important;
 	background-color: #263238;
 	opacity: 0.5;
+}
+.display-question {
+	font-size: 18px;
+	color: black;
 }
 .student-response {
     height: 100px;
@@ -138,6 +143,7 @@
     width: 100%;
     height: 70px;
 	border: 1px solid #BDBDBD;
+	resize: none;
     
 }
 .qa-button-group {
@@ -212,8 +218,11 @@
    margin: 0 !important;
    border-radius: 0px;
 }
+body {
+  overflow-x: hidden;
+}
 #pinDiv {
-  z-index: 2;
+  z-index: 9997;
   background-color: rgba(0,0,0, 0.9);
   height: 100%;
   width: 100%;
@@ -235,11 +244,11 @@ input[type=password] {
     left: 50%;
     margin-top: -100px;
     margin-left: -200px;
-    z-index: 3;
+    z-index: 9998;
 }
 
 #pinTitle {
-  z-index: 4;
+  z-index: 9999;
   color: white;
 }
 
@@ -263,6 +272,7 @@ input[type=password] {
 }
 .navbar-brand {
 	color: #BDBDBD;
+	margin-right: 2% !important;
 }
 .navbar-brand: hover {
 	color: white;
@@ -271,8 +281,8 @@ input[type=password] {
 	cursor: pointer;
 	background-color: #FF7043;
 	height: 40%;
-	width: 12%;
-	margin-left: 2%; 
+	width: 10%;
+	margin-right: 0%;
 }
 .progress span{
     float: left;

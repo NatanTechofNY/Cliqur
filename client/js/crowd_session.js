@@ -1,13 +1,4 @@
 if (Meteor.isClient) {
-  resetClickerData = function() {
-    Meteor.call('resetClickerData', {sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (e, res) {
-      if (e)
-        alert(e.error);
-      else{
-
-      };
-    });
-  };
 
 	Template.crowd_session.events({
        	'click #endssn': function() {
