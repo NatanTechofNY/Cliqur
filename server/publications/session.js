@@ -18,4 +18,15 @@ if (Meteor.isServer) {
 			this.ready();
 	});
 
+	Meteor.publish('sessionDataLimited', function (data) {
+		var sCheck = Sessions.findOne({"sessionId": data});
+		if (sCheck) {
+
+			return Sessions.find({"sessionId": data}, {fields: {sessionOwnerId: 1, sessionName: 1, sessionId: 1, clickerData: 1}});
+		
+		}
+		else
+			this.ready();
+	});
+
 };
