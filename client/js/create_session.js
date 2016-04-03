@@ -69,6 +69,9 @@ if (Meteor.isClient) {
               };
             });
           };
+        },
+        'focus #autoSelectrLoc': function(e) {
+          setTimeout(function() {$('#autoSelectrLoc').select();}, 12);
         }
     });
     Template.create_session.helpers({
