@@ -195,6 +195,7 @@
 }
 .student-response {
     height: 100px;
+	resize: none;
 }
 
 .student-input {
