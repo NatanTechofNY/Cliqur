@@ -1,6 +1,4 @@
-#sidebar-wrapper{
-  display: none;
-}
+
 .row {
 	background-color: transparent !important;
 }
@@ -208,11 +206,7 @@
 	font-size: 17px;
 }
 
-.well {
-    left: 10vh;
-    margin-top: 50px;
-    right: 0;
-}
+
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
@@ -266,10 +260,6 @@ input[type=password] {
 .navbar {
 	border-radius: 0px !important;
 	
-}
-.navbar-text {
-    padding-right: 20px;
-	color: grey;
 }
 .navbar-brand {
 	color: #BDBDBD;
@@ -378,7 +368,6 @@ input[type=password] {
 
 
 
-
  @media screen and (min-width: 1024px) {
     .fix-button-left {
     height: 50px;
@@ -415,11 +404,22 @@ input[type=password] {
 
 
     @media screen and (min-width: 768px) and (max-width: 1024px) {
+        body {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        .well {
+    left: 10vh;
+    margin-top: 20px;
+    width: 60vh;
+    height: 70vh;
+}
     .fix-button-left {
     height: 50px;
-    width: 100%;
+    width: 50%;
     top: 10vh;
-      left: 20%;
+      left: 5%;
       position: relative;
     }
     .navbar-right {
@@ -427,41 +427,43 @@ input[type=password] {
     }
 
     .panel-button-group {
-    position: fixed;
-    bottom: 0%;
-    left: 0vh;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-        }
+            position: fixed;
+            bottom: 10vh;
+            left: 11%;
+            width: 60vh;
+            padding: 0px;
+            margin: 0px;
+                }
         .generate-button {
-            top: 84vh;
-            width: 100%;
+            bottom: 10vh;
+            width: inherit;
+            position: absolute;
         }
-        .box {
-            left: 0;
-        }
-         .demo .main-title {
-              font-size: 3em;
-           }
-        .btn-admin {
-            width: 200px;
-            height: 56px;
-            position: relative;
-        }
-        .btn-admin-group {
+        .button-1 {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            width: 20vh;
             display: inline;
-            width: 50%;
         }
     }
 
 /*smart phones */
 @media screen and (max-width: 480px) and (min-width: 320px) {
-.fix-button-left {
+body {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        .well {
+    left: 8vh;
+    margin-top: 20px;
+    width: 60vh;
+}
+    .fix-button-left {
     height: 50px;
-    width: 100%;
+    width: 50%;
     top: 10vh;
-      left: 20%;
+      left: 8%;
       position: relative;
     }
     .navbar-right {
@@ -469,21 +471,24 @@ input[type=password] {
     }
 
     .panel-button-group {
-    position: fixed;
-    bottom: 0%;
-    left: 0vh;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-        }
+            position: fixed;
+            bottom: 0;
+            left: 10%;
+            width: 60vh;
+            padding: 0px;
+            margin: 0px;
+                }
         .generate-button {
-            top: 84vh;
-            width: 100%;
+            bottom: 8vh;
+            width: inherit;
+            position: absolute;
         }
-.well {
-    top: 10vh;
-    left: 10vh;
-    right: 10vh;
-}
+        .button-1 {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            width: 10vh;
+            display: inline;
+            height: 70%;
+        }
 }
 
