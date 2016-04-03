@@ -122,11 +122,16 @@
 
 .container-box, .jumbotron {
 	margin-top: 3% !important;
-	overflow-y: hidden;
+	overflow:hidden !important;
 }
 .jumbotron {
+	height: 10% !important;
 	background-color: #263238;
 	opacity: 0.5;
+}
+.display-question {
+	font-size: 18px;
+	color: black;
 }
 .student-response {
     height: 100px;
@@ -140,6 +145,7 @@
     width: 100%;
     height: 70px;
 	border: 1px solid #BDBDBD;
+	resize: none;
     
 }
 .qa-button-group {
@@ -273,6 +279,7 @@ input[type=password] {
 }
 .navbar-brand {
 	color: #BDBDBD;
+	margin-right: 2% !important;
 }
 .navbar-brand: hover {
 	color: white;
