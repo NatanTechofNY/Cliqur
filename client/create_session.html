@@ -17,7 +17,7 @@
 <section>
 <div class="row">
     <div class="col-md-offset-2 col-md-10">
-        <div class="well">
+        <div class="well" style="overflow: auto;height:500px;overflow-x:hidden">
             <h1>Student asked questions.</h1>
             <small>"Push" the ones that are most relevant to the class.</small>
             {{#each questionItem}}
@@ -29,6 +29,7 @@
                 </label>
               </div>
             {{/each}}
+            <br /><br />
         </div>
     </div>
 </div>

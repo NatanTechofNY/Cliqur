@@ -63,6 +63,9 @@ if (Meteor.isClient) {
     latestQuestion: function() {
       return Questions.findOne({isPublic: true});
     },
+        sessionId: function() {
+      return Router.current().params.sessionId;
+    },
     authorName: function() {
       if (Questions.findOne({isPublic: true})) {
         var sr = Users.findOne({"_id": Questions.findOne({isPublic: true}).authorId});
