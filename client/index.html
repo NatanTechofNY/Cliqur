@@ -3,106 +3,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
   <title>AnswerMe</title>
 </head>
 
 
-<template name="indexItem" background="http://redzone.scld.yorku.ca/files/2012/06/CLH2.jpg">
-    <link href="http://fonts.googleapis.com/css?family=Bitter:400,700,400italic" rel="stylesheet" type="text/css" >
+<template name="indexItem">
+            <section>
+                <div class="container-fluid demo">
+                   <div class="content">
+                      <div id="large-header" class="large-header">
+                         <canvas id="demo-canvas"></canvas>
+                         <h1 class="main-title">AnswerMe</h1>
+                          <p1 class="thin-title">Revolutionize Your Classroom Experience</p1>
+                          <div class="row button-group">
+                          <div class="col-md-offset-3 col-md-6 col-md-offset-3">
+                            <div class="row">
+                              <div class="col-md-9">
+                              <div id="errorMSG" style="font-size: 24px;color:red"></div>
+                                <input class="form-control student-input" id="codeInput" type="text" placeholder="Enter Your Session ID">
+                              </div>
+                              <div class="col-md-3">
+                                <button class="btn btn-default" data-toggle="modal" data-target="#joinSession" style="color:black" id="joinSessionBtn">Join Session Now</button>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <button class="btn btn-default btn-fluid" data-toggle="modal" style="color:black" data-target="#createSession">Professor? Create a Session</button>
+                              </div>
+                            </div>
+                            </div>
+                        </div>
+                      </div>
+                   </div>
+                </div>
+            </section>
 
-<div class="clouds">
-        <video width="2000" height="200" autoplay="autoplay" loop="loop" preload>
-          <source src="http://l.facebook.com/l.php?u=http%3A%2F%2Fmazwai.com%2Fsystem%2Fposts%2Fvideos%2F000%2F000%2F186%2Foriginal%2F390214194.mp4%3F1445111847&h=aAQH1wQ1t" type="video/mp4" >
-            <source src="http://l.facebook.com/l.php?u=http%3A%2F%2Fmazwai.com%2Fsystem%2Fposts%2Fvideos%2F000%2F000%2F186%2Foriginal%2F390214194.mp4%3F1445111847&h=aAQH1wQ1t" >
-            <source src="http://l.facebook.com/l.php?u=http%3A%2F%2Fmazwai.com%2Fsystem%2Fposts%2Fvideos%2F000%2F000%2F186%2Foriginal%2F390214194.mp4%3F1445111847&h=aAQH1wQ1t" type="video/webm" >
-            <object data="http://l.facebook.com/l.php?u=http%3A%2F%2Fmazwai.com%2Fsystem%2Fposts%2Fvideos%2F000%2F000%2F186%2Foriginal%2F390214194.mp4%3F1445111847&h=aAQH1wQ1t" width="2000" height="100vh">
-                <param name="wmode" value="transparent">
-                <param name="autoplay" value="true" >
-                <param name="loop" value="true" >
-                <embed src="http://l.facebook.com/l.php?u=http%3A%2F%2Fmazwai.com%2Fsystem%2Fposts%2Fvideos%2F000%2F000%2F186%2Foriginal%2F390214194.mp4%3F1445111847&h=aAQH1wQ1t" width="2000" height="100vh" wmode="transparent" >
-            </object>
-        </video> 
-    </div>
-
-
-    <header>
-        <div>
-            <h1 style="color:black">AnswerMe</h1>
-            <h3 style="color:black">Revolutionize your classroom experience</h3>
-        </div>
-
-        <div class="row button-group">
-          <div class="col-md-offset-3 col-md-6 col-md-offset-3">
-            <div class="row">
-              <div class="col-md-9">
-              <div id="errorMSG" style="font-size: 24px;color:red"></div>
-                <input class="form-control student-input" id="codeInput" type="text" placeholder="Enter Your Session ID">
-              </div>
-              <div class="col-md-3">
-                <button class="btn btn-default" data-toggle="modal" data-target="#joinSession" style="color:black" id="joinSessionBtn">Join Session Now</button>
-              </div>
-            </div>
-            <hr style="border: 1px solid black">
-            <div class="row">
-              <div class="col-md-12">
-                <button class="btn btn-default btn-fluid" data-toggle="modal" style="color:black" data-target="#createSession">Create a Session</button>
-              </div>
-            </div>
-            </div>
-        </div>
-    </header>
-       
-<style>
-.clouds {
-  height: 100vh;
-  background-size: cover;
-}
-body {
-    width: 100%;
-    margin: 0 auto;
-    font-family: Bitter, Georgia, serif; 
-    background: #ededed;
-
-}
-h1, h3 {
-  color: #fff;
-  text-align: center;
-}
-.btn-fluid {
-  width: 100vh;
-}
-.button-group {
-  top: 50vh;
-  position: relative;
-}
-div.clouds {
-    position:absolute;
-    z-index:1;
-    margin:0 auto;
-    width:100%;
-    overflow: hidden;
-}
-div.clouds video, div.clouds object, div.clouds embed {
-    /*width: 100%;*/
-    width: 2000px;
-    height: auto;
-    min-width: 720px;
-    margin: 0 auto;  
-}
-
-header {
-    width: 100%;
-    top: 0;
-    height: 50vh;
-    margin: 0 auto;
-    position:absolute;
-    z-index:2;
-    /*background: #ededed;*/
-    /*border-bottom: 1px solid #ccc;*/
-}
-
-</style>
 
 
   {{#if toJoinSession}}
