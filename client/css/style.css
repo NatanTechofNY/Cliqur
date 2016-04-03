@@ -116,7 +116,6 @@
 
 .container-box, .jumbotron {
 	margin-top: 3% !important;
-	overflow:hidden !important;
 }
 .jumbotron {
 	height: 10% !important;
