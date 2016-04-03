@@ -10,11 +10,9 @@ if(Meteor.isServer) {
 					return [g._id, g.fullName];
 				});
 
-				var buildr = [{name: "List for " + moment().format('LL'), data: userList}];
-
-				var toblob = XLSX.write(buildr, {bookType:'xlsx', bookSST:false, type:'binary'});
-			
-				return toblob;
+				var buildr = [{id: 1, name: ("List for " + moment().format('LL')), data: userList}];
+				var bfr = nxlsx.build(buildr);
+				return bfr;
 			};
 		}
 	});

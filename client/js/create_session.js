@@ -1,10 +1,4 @@
 if (Meteor.isClient) {
-	s2ab = function(s) {
-		var buf = new ArrayBuffer(s.length);
-		var view = new Uint8Array(buf);
-		for (var i=0; i!=s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
-		return buf;
-	};
 
 
     Template.create_session.events({
@@ -35,11 +29,35 @@ if (Meteor.isClient) {
 	       			if (e)
 	       				return alert(e.error);
 	       			else if(res){
-	       				saveAs(new Blob([s2ab(res)], {type: ""}), "attendance.xlsx");
+	       				var byteCharacters = atob(res);
+	       				var byteNumbers = new Array(byteCharacters.length);
+						for (var i = 0; i < byteCharacters.length; i++) {
+							byteNumbers[i] = byteCharacters.charCodeAt(i);
+						};
+						var byteArray = new Uint8Array(byteNumbers);
+						var blob = new Blob([byteArray], {type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+
+	       				saveAs(blob, "attendance.xlsx");
 	       			}
 	       		});
        		};
-       	}
+       	},
+       	'click #changeToThisPublic': function(e) {
+       		Meteor.call('toggleQuestion', {target: true, questionId: $('input[name="optionsRadios"]:checked').val(), sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (err, res) {
+       			if (err) {
+       				alert(err.error);
+       			};
+       		});
+       	},
+       	'click #deleteThisQuestion': function() {
+       		if (confirm('are you sure?')) {
+       			Meteor.call('removeQuestion', {questionId: $('input[name="optionsRadios"]:checked').val(), sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (err, res) {
+	       			if (err) {
+	       				alert(err.error);
+	       			};
+	       		});
+       		};
+       	},
     });
     Template.create_session.helpers({
     	sessionId: function () {
@@ -63,6 +81,16 @@ if (Meteor.isClient) {
 	    		else return [{"fullName": "Loading..."}];
     		}
     		else return [{"fullName": "Loading..."}];
+    	},
+    	questionItem: function() {
+    		return Questions.find();
+    	},
+    	thisAuthorName: function() {
+    		if (Questions.findOne()) {
+		        var sr = Users.findOne({"_id": this.authorId});
+		        return sr && sr.fullName;
+		      }
+		      else return "Unknown";
     	}
       //clickerResponse: function() {
         //var userId = Router.current().params.sessionId;

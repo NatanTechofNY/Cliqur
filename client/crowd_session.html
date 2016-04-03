@@ -12,18 +12,15 @@
     </nav>
 
 <div class="container box">
-	
-	<div class="jumbotron">
-		 <span id = "cover-text">No questions sent</span>
-	  <div class="row">
-		<div class="col-md-12">
-			<center>
-			  <h1 class="display-question"></h1>
-			</center>
-		  </div>
-		</div>
-	  </div>
-	
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-12">
+        <center>
+          <h1>{{latestQuestion.body}} <span>&ndash; {{authorName}}</span></h1>
+        </center>
+      </div>
+    </div>
+  </div>
 
        <div class="row">
         <div class="col-md-offset-2 col-md-8 col-md-offset-2">
@@ -31,7 +28,7 @@
             <textarea class="student-input" type="text" name="questionInput" placeholder="Enter your question here..."></textarea>
             <div class="row qa-button-group">
               <div class="col-md-6">
-                <button id="#sendQuestionBtn" class="btn student-qa-button student-response-button">
+                <button id="sendQuestionBtn" class="btn btn-warning student-qa-button student-response-button">
                   Send question
                 </button>
               </div>
@@ -47,16 +44,16 @@
               </div>
               
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>A</h2></button>
+                <button class="btn btn-defaul student-response-button mc" data-idx="0"><span>Recording response...</span><h2>A</h2></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>B</h2></button>
+                <button class="btn btn-defaul student-response-button mc" data-idx="1"><span>Recording response...</span><h2>B</h2></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>C</h2></button>
+                <button class="btn btn-defaul student-response-button mc" data-idx="2"><span>Recording response...</span><h2>C</h2></button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>D</h2></button>
+                <button class="btn btn-defaul student-response-button mc" data-idx="3"><span>Recording response...</span><h2>D</h2></button>
               </div>
             </div>
           </div>
