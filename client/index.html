@@ -8,7 +8,7 @@
 </head>
 
 
-<template name="indexItem">
+<template name="indexItem" background="http://redzone.scld.yorku.ca/files/2012/06/CLH2.jpg">
     <!--<div class="container-fluid">
   <div class="row">
     <div class="col-sm-9 col-md-6 col-lg-8 " style="background-color:white;height:1000px;z-index:0">
@@ -22,24 +22,10 @@
 </div> -->
     <link href="http://fonts.googleapis.com/css?family=Bitter:400,700,400italic" rel="stylesheet" type="text/css" >
 
-<div class="clouds">
-        <video width="600" height="200" autoplay="autoplay" loop="loop" preload>
-          <source src="http://ak0.picdn.net/shutterstock/videos/4746560/preview/stock-footage-a-college-professor-poses-for-a-portrait-with-his-arms-crossed-in-front-of-a-chalkboard-full-of-equa.mp4" type="video/mp4" >
-            <source src="http://ak0.picdn.net/shutterstock/videos/4746560/preview/stock-footage-a-college-professor-poses-for-a-portrait-with-his-arms-crossed-in-front-of-a-chalkboard-full-of-equa.mp4" type="http://leongaban.com/video/ogg" >
-            <source src="http://ak0.picdn.net/shutterstock/videos/4746560/preview/stock-footage-a-college-professor-poses-for-a-portrait-with-his-arms-crossed-in-front-of-a-chalkboard-full-of-equa.mp4" type="video/webm" >
-            <object data="http://ak0.picdn.net/shutterstock/videos/4746560/preview/stock-footage-a-college-professor-poses-for-a-portrait-with-his-arms-crossed-in-front-of-a-chalkboard-full-of-equa.mp4" width="1920" height="100vh">
-                <param name="wmode" value="transparent">
-                <param name="autoplay" value="true" >
-                <param name="loop" value="true" >
-                <embed src="http://ak0.picdn.net/shutterstock/videos/4746560/preview/stock-footage-a-college-professor-poses-for-a-portrait-with-his-arms-crossed-in-front-of-a-chalkboard-full-of-equa.mp4" width="1920" height="100vh" wmode="transparent" >
-            </object>
-        </video> 
-    </div>
-
     <header>
         <div>
-            <h1>Revolutionize your classroom experience</h1>
-            <h3>Education solutions tailored to you</h3>
+            <h1 style="color:black">AnswerMe</h1>
+            <h3 style="color:black">Revolutionize your classroom experience</h3>
         </div>
 
         <div class="row button-group">
@@ -49,13 +35,13 @@
                 <input class="form-control student-input" id="codeInput" type="text" placeholder="Enter Your Session ID">
               </div>
               <div class="col-md-3">
-                <button class="btn btn-default" data-toggle="modal" data-target="#joinSession"  id="joinSessionBtn">Join Session Now</button>
+                <button class="btn btn-default" data-toggle="modal" data-target="#joinSession" style="color:black" id="joinSessionBtn">Join Session Now</button>
               </div>
             </div>
-            <hr>
+            <hr style="border: 1px solid black">
             <div class="row">
               <div class="col-md-12">
-                <button class="btn btn-default btn-fluid" data-toggle="modal" data-target="#createSession">Create a Session</button>
+                <button class="btn btn-default btn-fluid" data-toggle="modal" style="color:black" data-target="#createSession">Create a Session</button>
               </div>
             </div>
             </div>
@@ -72,6 +58,7 @@ body {
     margin: 0 auto;
     font-family: Bitter, Georgia, serif; 
     background: #ededed;
+
 }
 h1, h3 {
   color: #fff;

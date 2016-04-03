@@ -9,6 +9,24 @@
 </nav>
 
 <section>
+<div class="row">
+    <div class="col-md-offset-2 col-md-10">
+        <div class="well">
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="Question1">
+                <p>{{Q1}} </p>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="Question2">
+                <p>{{Q2}}</p>
+               </label>
+            </div>
+        </div>
+    </div>
+</div>
   <div class="row panel-button-group">
     <div class="col-md-6 nopadding">
       <button class="btn btn-success btn-block button-1">Push to public view</button>
@@ -36,7 +54,7 @@
                     </li>
                 {{/each}}
             </ul>
-            <button class="btn btn-danger btn-block generate-button">Generate Report</button>
+            <button class="btn btn-danger btn-block generate-button">Generate Attendance Report</button>
         </div>
         <!-- /#sidebar-wrapper -->
 

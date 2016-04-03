@@ -287,7 +287,7 @@
     margin: 0px;
 }
 .generate-button {
-    bottom: 70vh;
+    top: 40vh;
 }
 #sidebar-wrapper {
     background-color: #fff;
@@ -296,6 +296,18 @@
 }
 .box {
     left: 0;
+}
+.navbar-right {
+    width: 50px;
+    height: 20px;
+}
+.container-fluid {
+    padding: 0;
+}
+.well {
+    top: 10vh;
+    left: 10vh;
+    right: 10vh;
 }
 }
 @media screen and (max-width: 780px) {
@@ -319,6 +331,14 @@
 }
 .box {
     left: 0;
+}
+.well {
+    left: 10vh;
+    margin-top: 50px;
+    right: 10vh;
+}
+.navbar-right {
+    width: 60%;
 }
 }
 .nopadding {
@@ -383,6 +403,11 @@ input[type=password] {
 .btn-modal {
     padding: 15px 30px;
 }
-
+.well {
+    height: 60vh;
+    width: 100vh;
+    padding-top: 100px;
+    position: fixed;
+}
 
 
