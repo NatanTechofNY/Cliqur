@@ -288,10 +288,11 @@ input[type=password] {
 .progress span{
     float: left;
     color: #333;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     padding-right: 5px;
     padding-left: 5px;
+    position: absolute;
 }
 .index-container input {
     height: 72px;
