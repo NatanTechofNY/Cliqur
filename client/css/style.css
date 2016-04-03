@@ -291,8 +291,8 @@ input[type=password] {
 	cursor: pointer;
 	background-color: #FF7043;
 	height: 40%;
-	width: 12%;
-	margin-left: 2%; 
+	width: 10%;
+	margin-right: 0%;
 }
 .progress span{
     float: left;

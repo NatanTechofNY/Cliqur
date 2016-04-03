@@ -43,7 +43,7 @@ if(Meteor.isClient) {
 						});
 						setTimeout(function() {
 							$('[data-factor]').each(function() {
-								$(this).css('width', Math.abs(parseFloat($(this).attr('data-factor'))*100 - 5.8).toFixed(1)  + '%');
+								$(this).css('width', Math.abs(parseFloat($(this).attr('data-factor'))*100 - 1.2).toFixed(1)  + '%');
 							});
 						}, 500);
 				///--------------------*****-----------------------//
