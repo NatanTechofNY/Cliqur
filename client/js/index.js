@@ -32,7 +32,7 @@ if (Meteor.isClient) {
 			
 			Session.set('toCreateSession', true);	
 				
-		},
+		},		
 		'keyup input.inputPasswordTs': function(e) {
 			var $this = $(e.currentTarget);
 			if($this.val().length >= 1) {
@@ -151,6 +151,7 @@ if (Meteor.isClient) {
 		$('#joinSessionBtn').trigger('click');
 		$('#errorMSG-ONE')[0].innerHTML = ".";
 		Session.set('tempRet', true);
+		$('[data-toggle="tooltip"]').tooltip();
 	};
 	Template.indexItem.destroyed = function() {
 		$('.modal-backdrop').hide();
