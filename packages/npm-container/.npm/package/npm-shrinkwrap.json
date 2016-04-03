@@ -1,5 +1,100 @@
 {
   "dependencies": {
+    "node-xlsx": {
+      "version": "0.6.0",
+      "dependencies": {
+        "lodash.defaults": {
+          "version": "3.1.2",
+          "dependencies": {
+            "lodash.assign": {
+              "version": "3.2.0",
+              "dependencies": {
+                "lodash._baseassign": {
+                  "version": "3.2.0",
+                  "dependencies": {
+                    "lodash._basecopy": {
+                      "version": "3.0.1"
+                    }
+                  }
+                },
+                "lodash._createassigner": {
+                  "version": "3.1.1",
+                  "dependencies": {
+                    "lodash._bindcallback": {
+                      "version": "3.0.1"
+                    },
+                    "lodash._isiterateecall": {
+                      "version": "3.0.9"
+                    }
+                  }
+                },
+                "lodash.keys": {
+                  "version": "3.1.2",
+                  "dependencies": {
+                    "lodash._getnative": {
+                      "version": "3.9.1"
+                    },
+                    "lodash.isarguments": {
+                      "version": "3.0.8"
+                    },
+                    "lodash.isarray": {
+                      "version": "3.0.4"
+                    }
+                  }
+                }
+              }
+            },
+            "lodash.restparam": {
+              "version": "3.6.1"
+            }
+          }
+        },
+        "lodash.map": {
+          "version": "3.1.4",
+          "dependencies": {
+            "lodash._arraymap": {
+              "version": "3.0.0"
+            },
+            "lodash._basecallback": {
+              "version": "3.3.1",
+              "dependencies": {
+                "lodash._baseisequal": {
+                  "version": "3.0.7",
+                  "dependencies": {
+                    "lodash.istypedarray": {
+                      "version": "3.0.6"
+                    }
+                  }
+                },
+                "lodash._bindcallback": {
+                  "version": "3.0.1"
+                },
+                "lodash.pairs": {
+                  "version": "3.0.1"
+                }
+              }
+            },
+            "lodash._baseeach": {
+              "version": "3.0.4"
+            },
+            "lodash.isarray": {
+              "version": "3.0.4"
+            },
+            "lodash.keys": {
+              "version": "3.1.2",
+              "dependencies": {
+                "lodash._getnative": {
+                  "version": "3.9.1"
+                },
+                "lodash.isarguments": {
+                  "version": "3.0.8"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "xlsx": {
       "version": "0.8.0",
       "dependencies": {

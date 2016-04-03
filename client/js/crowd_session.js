@@ -45,6 +45,16 @@ if (Meteor.isClient) {
     userName: function () {
       var sr = Users.findOne({"_id": Session.get('userSessItem').userId});
       return sr && sr.fullName;
+    },
+    latestQuestion: function() {
+      return Questions.findOne({isPublic: true});
+    },
+    authorName: function() {
+      if (Questions.findOne({isPublic: true})) {
+        var sr = Users.findOne({"_id": Questions.findOne({isPublic: true}).authorId});
+        return sr && sr.fullName;
+      }
+      else return "No public questions to display";
     }
   });
 };
