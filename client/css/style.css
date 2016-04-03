@@ -104,10 +104,6 @@
     left: 10vh;
     position: absolute;
 }
-.btn-lg {
-    width: 150px;
-    padding: 20px;
-}
 .student-item {
     color: #333;
 }
@@ -409,6 +405,11 @@ input[type=password] {
             height: 100%;
             width: 100%;
         }
+
+.btn-lg {
+    width: 150px;
+    padding: 20px;
+}
  }
 
 
@@ -455,6 +456,11 @@ input[type=password] {
             width: 20vh;
             display: inline;
         }
+
+.btn-lg {
+    width: 150px;
+    padding: 20px;
+}
     }
 
 /*smart phones */
@@ -479,7 +485,9 @@ body {
     .navbar-right {
         float: right;
     }
-
+    .btn-lg {
+        padding: 0px;
+    }
     .panel-button-group {
             position: fixed;
             bottom: 0;
