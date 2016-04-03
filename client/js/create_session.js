@@ -64,5 +64,9 @@ if (Meteor.isClient) {
     		}
     		else return [{"fullName": "Loading..."}];
     	}
+      //clickerResponse: function() {
+        //var userId = Router.current().params.sessionId;
+        //return Sessions.findOne({"clickerData": clickerResponse})
+      //}
     });
 }
