@@ -43,7 +43,7 @@ if (Meteor.isClient) {
        		};
        	},
        	'click #changeToThisPublic': function(e) {
-			Meteor.call('toggleQuestion', {target: true, questionId: $('input[name="optionsRadios"]:checked').val(), sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (err, res) {
+			     Meteor.call('toggleQuestion', {target: true, questionId: $('input[name="optionsRadios"]:checked').val(), sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (err, res) {
        			if (err) {
        				alert(err.error);
        			};
@@ -58,6 +58,17 @@ if (Meteor.isClient) {
 	       		});
        		};
        	},
+        'click #resetPollBtn': function() {
+          if (confirm('Are you sure?')) {
+            Meteor.call('resetClickerData', {sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (e, res) {
+              if (e)
+                alert(e.error);
+              else{
+                alert('Polls reset!');
+              };
+            });
+          };
+        }
     });
     Template.create_session.helpers({
     	sessionId: function () {
