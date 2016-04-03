@@ -2,7 +2,7 @@
   <title>Admin | Cliqur</title>
   <nav class="navbar navbar-default">
   <div class="container-fluid">
-      <a class="navbar-brand" href="#">Cliqur</a>
+      <a class="navbar-brand" href="">Cliqur | Session ID: <input type="text" value="{{sessionId}}"></a> 
       
     <div class="btn-admin-group row">
 
@@ -18,7 +18,8 @@
 <div class="row">
     <div class="col-md-offset-2 col-md-10">
         <div class="well">
-            
+            <h1>Student asked questions.</h1>
+            <small>"Push" the ones that are most relevant to the class.</small>
             {{#each questionItem}}
               <div class="radio">
                 <label>

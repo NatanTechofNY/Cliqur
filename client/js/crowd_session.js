@@ -42,8 +42,10 @@ if (Meteor.isClient) {
               if (e) {
                 alert(e.error);
               }
-              else
+              else {
                 document.querySelector('textarea[name="questionInput"]').value = "";
+                alert("Question sent.");
+              }
             });
           }
           else $('textarea[name="questionInput"]').select();
