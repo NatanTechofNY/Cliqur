@@ -1,39 +1,42 @@
 <template name="crowd_session">
-    <nav class="navbar navbar-default">
+    <nav class="navbar">
       <div class="container-fluid">
           <a class="navbar-brand" href="#">
             AnswerMe Students
             </a>
-            <buttom class="btn btn-danger btn-lg navbar-right" style="z-index:1;" id="endssn">Exit Session</buttom>
-            <p id = "login-name" class="navbar-text navbar-right">Signed in as {{userName}}</p>
+            <buttom class="btn btn-danger btn-lg navbar-right exit" style="z-index:1;" id="endssn">Exit Session</buttom>
+            <p id = "login-name" class="navbar-right">Signed in as {{userName}}</p>
             <label id="status" class="navbar-text navbar-right"></label>
 
       </div>
     </nav>
 
 <div class="container box">
-<div class="jumbotron">
-  <div class="row">
-    <div class="col-md-12">
-        <center>
-          <h1></h1>
-        </center>
-      </div>
-    </div>
-  </div>
+	
+	<div class="jumbotron">
+		 <span id = "cover-text">No questions sent</span>
+	  <div class="row">
+		<div class="col-md-12">
+			<center>
+			  <h1 class="display-question"></h1>
+			</center>
+		  </div>
+		</div>
+	  </div>
+	
 
-      <div class="row">
+       <div class="row">
         <div class="col-md-offset-2 col-md-8 col-md-offset-2">
           <div class="container-fluid">
             <textarea class="student-input" type="text" name="questionInput" placeholder="Enter your question here..."></textarea>
             <div class="row qa-button-group">
               <div class="col-md-6">
-                <button id="#sendQuestionBtn" class="btn btn-warning student-qa-button student-response-button">
+                <button id="#sendQuestionBtn" class="btn student-qa-button student-response-button">
                   Send question
                 </button>
               </div>
               <div class="col-md-6">
-                <button id="clearQuestionBtn" class="btn student-response-button btn-warning student-qa-button">
+                <button id="clearQuestionBtn" class="btn student-response-button student-qa-button">
                   Clear
                 </button>
               </div>
