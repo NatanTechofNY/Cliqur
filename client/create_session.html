@@ -2,9 +2,7 @@
   <title>Admin | AnswerMe</title>
   <nav class="navbar navbar-default">
   <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        AnswerMe
-      </a>
+      <a class="navbar-brand" href="#">AnswerMe</a>
       <button class="btn btn-danger btn-lg navbar-right" id="endssn">End Session</button>
       <a target="_blank" href="/d/{{sessionId}}/p"><button class="btn btn-primary btn-lg navbar-right">Go to Public View</button></a>
     </div>
@@ -46,21 +44,15 @@
                 <li class="sidebar-brand">
                     <h3>Class Attendance</h3>
                 </li>
-                <li class="student-item">
-                    Peter Zheng
-                </li>
-                <li class="student-item">
-                    Rabeea Ahmad
-                </li>
-                <li class="student-item">
-                    Natan
-                </li>
-                <li class="student-item">
-                    Jay
-                </li>
-                 <li class="student-item">
-                    
-                </li>
+                {{#each usersList}}
+                    <li class="student-item" title="{{studentId}}">
+                        {{#if eq userId SessionItem.sessionOwnerId}}
+                            <b>{{fullName}}</b>
+                        {{else}}
+                            <span>{{fullName}}</span>
+                        {{/if}}
+                    </li>
+                {{/each}}
             </ul>
             <button class="btn btn-danger btn-block generate-button">Generate Attendance Report</button>
         </div>
