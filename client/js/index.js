@@ -9,9 +9,9 @@ if (Meteor.isClient) {
 			var classCode = $('#codeInput').val();
 			var regCheck = /^[a-z0-9]+$/i;
 			if(typeof classCode !== 'string' && classCode.length !== 6)
-				return $('#errorMSG')[0].innerHTML = "Session ID must be 6 characters long.", $('#errorMSG').fadeOut(2400);
+				return $('#errorMSG-ONE')[0].innerHTML = "Session ID must be 6 characters long.", $("#errorMSG-ONE").show(), $('#errorMSG-ONE').fadeOut(2400);
 			else if (!regCheck.test(classCode))
-				return $('#errorMSG')[0].innerHTML = "Invalid session ID.", $('#errorMSG').fadeOut(2400);
+				return $('#errorMSG-ONE')[0].innerHTML = "Invalid session ID.", $("#errorMSG-ONE").show(), $('#errorMSG-ONE').fadeOut(2400);
 			else
 				Session.set('toJoinSession', classCode);
 
@@ -36,9 +36,9 @@ if (Meteor.isClient) {
 			var stdntId = $('#studentId').val();
 			var regCheckName = /^\d+$/;
 			if(regCheckName.test(fname) || regCheckName.test(lname) || fname.length < 2 || lname.length < 2)
-				return $('#errorMSG-joinForm')[0].innerHTML = "Please enter a valid name.", $('#errorMSG-joinForm').fadeOut(2400);
+				return $('#errorMSG-joinForm')[0].innerHTML = "Please enter a valid name.", $("#errorMSG-joinForm").show(), $('#errorMSG-joinForm').fadeOut(2400);
 			else if (stdntId.length < 2)
-				return $('#errorMSG-joinForm')[0].innerHTML = "Please enter a valid student ID.", $('#errorMSG-joinForm').fadeOut(2400);
+				return $('#errorMSG-joinForm')[0].innerHTML = "Please enter a valid student ID.", $("#errorMSG-joinForm").show(), $('#errorMSG-joinForm').fadeOut(2400);
 
 
 			function tempEndCall(datter) {
@@ -105,12 +105,12 @@ if (Meteor.isClient) {
 
 			var regCheck = /^\d+$/;
 			if(regCheck.test(fname) || regCheck.test(lname) || fname.length < 2 || lname.length < 2)
-				return $('#errorMSG-createSession')[0].innerHTML = "Please enter a valid name.", $('#errorMSG-createSession').fadeOut(2400);
+				return $('#errorMSG-createSession')[0].innerHTML = "Please enter a valid name.", $("#errorMSG-createSession").show(), $('#errorMSG-createSession').fadeOut(2400);
 			else if (className.length < 2)
-				return $('#errorMSG-createSession')[0].innerHTML = "Class name must be longer than two characters.", $('#errorMSG-createSession').fadeOut(2400);
+				return $('#errorMSG-createSession')[0].innerHTML = "Class name must be longer than two characters.", $("#errorMSG-createSession").show(), $('#errorMSG-createSession').fadeOut(2400);
 			else if(pin.length) {
 				if(!regCheck.test(pin) && pin.length != 4)
-				return $('#errorMSG-createSession')[0].innerHTML = "Pin can only be 4 digits.", $('#errorMSG-createSession').fadeOut(2400);
+				return $('#errorMSG-createSession')[0].innerHTML = "Pin can only be 4 digits.", $("#errorMSG-createSession").show(), $('#errorMSG-createSession').fadeOut(2400);
 			}
 
 			Meteor.call("addUser", {
