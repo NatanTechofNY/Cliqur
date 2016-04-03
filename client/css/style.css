@@ -46,32 +46,8 @@
 	border-radius: 1px;
 	
 }
-#codeInput {
-	font-size: 14px;
-	margin: auto;
-	margin-top: 24% !important;
-	width: 60%;
-	height: 6% !important;
-	
-}
-#joinSessionBtn{
-	position: relative !important;
-	top: 4% !important;
-	margin: auto !important;
-	width: 30% !important;
-	height: 4.5% !important;
-	background-color: black;
-	color: white;
-	border: none;
-	border-radius: 1px !important;
-	
-}
-.create-panel {
-}
-body {
-}
-.block, .container {
-
+#createSessionBtn {
+    font-size: 18px;
 }
 .move-right {
     left: 10vh;
@@ -219,10 +195,11 @@ body {
 .jumbotron {
 	z-index: 1;
 	width: 80%;
-	margin-top: 3% !important;
+	margin-top: 2% !important;
 	margin: auto;
 	background-color: black;
 	opacity: 0.5;
+	border-radius: 0px;
 	
 }
 #cover-text {
@@ -321,10 +298,8 @@ body {
    padding-top: 20px;
 }
 #login-name {
-	font-size: 12px;
-	margin-right: 5%;
-	margin-top: 1.4%;
-	color: #263238;
+	width: 15%;
+	margin-top: 1%;
 }
 .slide {
     padding-top: 30px;
@@ -353,7 +328,7 @@ body {
     margin: 0px;
 }
 .generate-button {
-    bottom: 70vh;
+    top: 40vh;
 }
 #sidebar-wrapper {
     background-color: #fff;
@@ -362,6 +337,18 @@ body {
 }
 .box {
     left: 0;
+}
+.navbar-right {
+    width: 50px;
+    height: 20px;
+}
+.container-fluid {
+    padding: 0;
+}
+.well {
+    top: 10vh;
+    left: 10vh;
+    right: 10vh;
 }
 }
 @media screen and (max-width: 780px) {
@@ -387,6 +374,14 @@ body {
     left: 0;
 }
 	}
+.well {
+    left: 10vh;
+    margin-top: 50px;
+    right: 10vh;
+}
+.navbar-right {
+    width: 60%;
+}
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
@@ -463,7 +458,7 @@ input[type=password] {
 	background-color: #FF7043;
 	height: 40%;
 	width: 12%;
-	margin-right:auto; 
+	margin-left: 2%; 
 }
 .progress span{
     float: left;
@@ -495,3 +490,14 @@ input[type=password] {
 .studentButton:hover {
 	background-color: #4CAF50;
 }
+
+.btn-modal {
+    padding: 15px 30px;
+}
+.well {
+    height: 60vh;
+    width: 100vh;
+    padding-top: 100px;
+    position: fixed;
+}
+

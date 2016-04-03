@@ -11,20 +11,23 @@
 </nav>
 
 <section>
-     <div class="col-md-offset-2 col-md-8 col-md-offset-2">
-     <center>
-<div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-default active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
-  </label>
-  <label class="btn btn-default">
-    <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
-  </label>
-  <label class="btn btn-default">
-    <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
-  </label>
-</div>
-     </center>
+<div class="row">
+    <div class="col-md-offset-2 col-md-10">
+        <div class="well">
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="Question1">
+                <p>{{Q1}} </p>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="Question2">
+                <p>{{Q2}}</p>
+               </label>
+            </div>
+        </div>
+    </div>
 </div>
   <div class="row panel-button-group">
     <div class="col-md-6 nopadding">
@@ -35,7 +38,6 @@
     </div>
   </div>
 </section>
-
     <div id="wrapper">
 
         <!-- Sidebar -->
@@ -56,14 +58,11 @@
                 <li class="student-item">
                     Jay
                 </li>
-                <li class="student-item">
-                    Rachel
-                </li>
                  <li class="student-item">
                     
                 </li>
             </ul>
-            <button class="btn btn-danger btn-block generate-button">Generate Report</button>
+            <button class="btn btn-danger btn-block generate-button">Generate Attendance Report</button>
         </div>
         <!-- /#sidebar-wrapper -->
 

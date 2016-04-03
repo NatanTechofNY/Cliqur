@@ -8,8 +8,8 @@
 </head>
 
 
-<template name="indexItem">
-    <div class="container-fluid">
+<template name="indexItem" background="http://redzone.scld.yorku.ca/files/2012/06/CLH2.jpg">
+    <!--<div class="container-fluid">
   <div class="row">
     <div class="col-sm-9 col-md-6 col-lg-8 " style="background-color:white;height:1000px;z-index:0">
     <input class="form-control" type="text" id = "codeInput" placeholder="Enter class code here!">
@@ -19,10 +19,85 @@
       <button class="btn btn-default btn-block" data-toggle="modal" data-target="#createSession" id="createSessionBtn">Create Session</button>
     </div>
   </div>
-</div>
-    
-       
+</div> -->
+    <link href="http://fonts.googleapis.com/css?family=Bitter:400,700,400italic" rel="stylesheet" type="text/css" >
 
+    <header>
+        <div>
+            <h1 style="color:black">AnswerMe</h1>
+            <h3 style="color:black">Revolutionize your classroom experience</h3>
+        </div>
+
+        <div class="row button-group">
+          <div class="col-md-offset-3 col-md-6 col-md-offset-3">
+            <div class="row">
+              <div class="col-md-9">
+                <input class="form-control student-input" id="codeInput" type="text" placeholder="Enter Your Session ID">
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-default" data-toggle="modal" data-target="#joinSession" style="color:black" id="joinSessionBtn">Join Session Now</button>
+              </div>
+            </div>
+            <hr style="border: 1px solid black">
+            <div class="row">
+              <div class="col-md-12">
+                <button class="btn btn-default btn-fluid" data-toggle="modal" style="color:black" data-target="#createSession">Create a Session</button>
+              </div>
+            </div>
+            </div>
+        </div>
+    </header>
+       
+<style>
+.clouds {
+  height: 100vh;
+  background-size: cover;
+}
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Bitter, Georgia, serif; 
+    background: #ededed;
+
+}
+h1, h3 {
+  color: #fff;
+  text-align: center;
+}
+.btn-fluid {
+  width: 100vh;
+}
+.button-group {
+  top: 50vh;
+  position: relative;
+}
+div.clouds {
+    position:absolute;
+    z-index:1;
+    margin:0 auto;
+    width:100%;
+    overflow: hidden;
+}
+div.clouds video, div.clouds object, div.clouds embed {
+    /*width: 100%;*/
+    width: 2000px;
+    height: auto;
+    min-width: 720px;
+    margin: 0 auto;  
+}
+
+header {
+    width: 100%;
+    top: 0;
+    height: 50vh;
+    margin: 0 auto;
+    position:absolute;
+    z-index:2;
+    /*background: #ededed;*/
+    /*border-bottom: 1px solid #ccc;*/
+}
+
+</style>
 
 
   {{#if toJoinSession}}
@@ -50,8 +125,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" onclick='$("#toJoinForm").trigger("submit")'>Continue</button>
+        <button type="button" class="btn-modal" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn-modal" onclick='$("#toJoinForm").trigger("submit")'>Continue</button>
       </div>
     </div>
   </div>
@@ -90,8 +165,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" onclick='$("#createSessionForm").trigger("submit")'>Continue</button>
+        <button type="button" class="btn-modal" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn-modal" onclick='$("#createSessionForm").trigger("submit")'>Continue</button>
       </div>
     </div>
   </div>
