@@ -1,5 +1,3 @@
 #AnswerMe
 
-## Support & Documentation
-
-Meteor documentation can be found at http://docs.meteor.com/
+It is a simple and quick way for professors to *engage* with their students in *real-time*
