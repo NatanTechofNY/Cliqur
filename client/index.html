@@ -18,8 +18,8 @@
                           <div class="row button-group">
                           <div class="col-md-offset-3 col-md-6 col-md-offset-3">
                             <div class="row">
+                           <div id="errorMSG-ONE" style="font-size: 24px;color:red;opacity:0"></div>
                               <div class="col-md-9">
-                              <div id="errorMSG-ONE" style="font-size: 24px;color:red"></div>
                                 <input class="form-control student-input" id="codeInput" type="text" placeholder="Enter Your Session ID">
                               </div>
                               <div class="col-md-3">
@@ -41,7 +41,6 @@
 
 
 
-  {{#if toJoinSession}}
 <div class="modal fade join-panel" id="joinSession" tabindex="-1" role="dialog" aria-labelledby="joinSession">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -73,7 +72,6 @@
     </div>
   </div>
 </div>
-  {{/if}}
 <div class="modal fade" id="createSession" tabindex="-1" role="dialog" aria-labelledby="createSession">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
