@@ -9,7 +9,7 @@
 
 
 <template name="indexItem">
-    <div class="container-fluid">
+    <!--<div class="container-fluid">
   <div class="row">
     <div class="col-sm-9 col-md-6 col-lg-8 " style="background-color:white;height:1000px;z-index:0">
     <input class="form-control" type="text" id = "codeInput" placeholder="Enter class code here!">
@@ -19,10 +19,98 @@
       <button class="btn btn-default btn-block" data-toggle="modal" data-target="#createSession" id="createSessionBtn">Create Session</button>
     </div>
   </div>
-</div>
-    
-       
+</div> -->
+    <link href="http://fonts.googleapis.com/css?family=Bitter:400,700,400italic" rel="stylesheet" type="text/css" >
 
+<div class="clouds">
+        <video width="600" height="200" autoplay="autoplay" loop="loop" preload>
+          <source src="http://ak0.picdn.net/shutterstock/videos/4746560/preview/stock-footage-a-college-professor-poses-for-a-portrait-with-his-arms-crossed-in-front-of-a-chalkboard-full-of-equa.mp4" type="video/mp4" >
+            <source src="http://ak0.picdn.net/shutterstock/videos/4746560/preview/stock-footage-a-college-professor-poses-for-a-portrait-with-his-arms-crossed-in-front-of-a-chalkboard-full-of-equa.mp4" type="http://leongaban.com/video/ogg" >
+            <source src="http://ak0.picdn.net/shutterstock/videos/4746560/preview/stock-footage-a-college-professor-poses-for-a-portrait-with-his-arms-crossed-in-front-of-a-chalkboard-full-of-equa.mp4" type="video/webm" >
+            <object data="http://ak0.picdn.net/shutterstock/videos/4746560/preview/stock-footage-a-college-professor-poses-for-a-portrait-with-his-arms-crossed-in-front-of-a-chalkboard-full-of-equa.mp4" width="1920" height="100vh">
+                <param name="wmode" value="transparent">
+                <param name="autoplay" value="true" >
+                <param name="loop" value="true" >
+                <embed src="http://ak0.picdn.net/shutterstock/videos/4746560/preview/stock-footage-a-college-professor-poses-for-a-portrait-with-his-arms-crossed-in-front-of-a-chalkboard-full-of-equa.mp4" width="1920" height="100vh" wmode="transparent" >
+            </object>
+        </video> 
+    </div>
+
+    <header>
+        <div>
+            <h1>Revolutionize your classroom experience</h1>
+            <h3>Education solutions tailored to you</h3>
+        </div>
+
+        <div class="row button-group">
+          <div class="col-md-offset-3 col-md-6 col-md-offset-3">
+            <div class="row">
+              <div class="col-md-9">
+                <input class="form-control student-input" id="codeInput" type="text" placeholder="Enter Your Session ID">
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-default" data-toggle="modal" data-target="#joinSession"  id="joinSessionBtn">Join Session Now</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-12">
+                <button class="btn btn-default btn-fluid" data-toggle="modal" data-target="#createSession">Create a Session</button>
+              </div>
+            </div>
+            </div>
+        </div>
+    </header>
+       
+<style>
+.clouds {
+  height: 100vh;
+  background-size: cover;
+}
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Bitter, Georgia, serif; 
+    background: #ededed;
+}
+h1, h3 {
+  color: #fff;
+  text-align: center;
+}
+.btn-fluid {
+  width: 100vh;
+}
+.button-group {
+  top: 50vh;
+  position: relative;
+}
+div.clouds {
+    position:absolute;
+    z-index:1;
+    margin:0 auto;
+    width:100%;
+    overflow: hidden;
+}
+div.clouds video, div.clouds object, div.clouds embed {
+    /*width: 100%;*/
+    width: 2000px;
+    height: auto;
+    min-width: 720px;
+    margin: 0 auto;  
+}
+
+header {
+    width: 100%;
+    top: 0;
+    height: 50vh;
+    margin: 0 auto;
+    position:absolute;
+    z-index:2;
+    /*background: #ededed;*/
+    /*border-bottom: 1px solid #ccc;*/
+}
+
+</style>
 
 
   {{#if toJoinSession}}
@@ -50,8 +138,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" onclick='$("#toJoinForm").trigger("submit")'>Continue</button>
+        <button type="button" class="btn-modal" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn-modal" onclick='$("#toJoinForm").trigger("submit")'>Continue</button>
       </div>
     </div>
   </div>
@@ -90,8 +178,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" onclick='$("#createSessionForm").trigger("submit")'>Continue</button>
+        <button type="button" class="btn-modal" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn-modal" onclick='$("#createSessionForm").trigger("submit")'>Continue</button>
       </div>
     </div>
   </div>

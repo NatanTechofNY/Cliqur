@@ -46,32 +46,8 @@
 	border-radius: 1px;
 	
 }
-#codeInput {
-	font-size: 14px;
-	margin: auto;
-	margin-top: 24% !important;
-	width: 60%;
-	height: 6% !important;
-	
-}
-#joinSessionBtn{
-	position: relative !important;
-	top: 4% !important;
-	margin: auto !important;
-	width: 30% !important;
-	height: 4.5% !important;
-	background-color: black;
-	color: white;
-	border: none;
-	border-radius: 1px !important;
-	
-}
-.create-panel {
-}
-body {
-}
-.block, .container {
-
+#createSessionBtn {
+    font-size: 18px;
 }
 .move-right {
     left: 10vh;
@@ -404,3 +380,9 @@ input[type=password] {
 .navbar-text {
     padding-right: 20px;
 }
+.btn-modal {
+    padding: 15px 30px;
+}
+
+
+

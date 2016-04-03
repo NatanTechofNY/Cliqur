@@ -14,13 +14,23 @@ if (Meteor.isClient) {
     		return Router.current().params.sessionId;
     	},
     	SessionItem: function() {
-    		return Sessions.findOne({"sessionId": Router.current().params});
+    		return Sessions.findOne({"sessionId": Router.current().params.sessionId});
     	},
     	usersList: function() {
-    		var subscribtn = Meteor.subscribe('usersListData', {list: Sessions.findOne({"sessionId": Router.current().params}).userList});
-    		var list = [];
+    		if (Sessions.findOne({"sessionId": Router.current().params.sessionId})) {
+    			var subscribtn = Meteor.subscribe('listOfUsers', {list: Sessions.findOne({"sessionId": Router.current().params.sessionId}).userList.map(function(g) {
+    				return g.userId;
+	    		})});
+	    		if (subscribtn.ready()) {
+		    		var list = Sessions.findOne({"sessionId": Router.current().params.sessionId}).userList.map(function(g) {
+		    			return Users.findOne({"_id": g.userId});
+		    		});
 
-    		return list;
+		    		return list;
+	    		}
+	    		else return [{"fullName": "Loading..."}];
+    		}
+    		else return [{"fullName": "Loading..."}];
     	}
     });
 }

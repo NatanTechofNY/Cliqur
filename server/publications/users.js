@@ -3,10 +3,8 @@ if (Meteor.isServer) {
 		return Users.find({"_id": userId});
 	});
 	Meteor.publish('listOfUsers', function (userIds) {
-		return Users.find({"_id": $in: userIds});
+		return Users.find({"_id": {"$in": userIds.list}});
 	});
 
-	
 
-	
 };

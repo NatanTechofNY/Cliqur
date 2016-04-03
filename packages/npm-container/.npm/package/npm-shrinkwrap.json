@@ -1,0 +1,87 @@
+{
+  "dependencies": {
+    "xlsx": {
+      "version": "0.8.0",
+      "dependencies": {
+        "ssf": {
+          "version": "0.8.2",
+          "dependencies": {
+            "voc": {
+              "version": "0.5.0"
+            },
+            "colors": {
+              "version": "0.6.2"
+            },
+            "frac": {
+              "version": "0.3.1"
+            }
+          }
+        },
+        "codepage": {
+          "version": "1.3.8",
+          "dependencies": {
+            "voc": {
+              "version": "0.5.0"
+            },
+            "concat-stream": {
+              "version": "1.5.1",
+              "dependencies": {
+                "inherits": {
+                  "version": "2.0.1"
+                },
+                "typedarray": {
+                  "version": "0.0.6"
+                },
+                "readable-stream": {
+                  "version": "2.0.6",
+                  "dependencies": {
+                    "core-util-is": {
+                      "version": "1.0.2"
+                    },
+                    "isarray": {
+                      "version": "1.0.0"
+                    },
+                    "process-nextick-args": {
+                      "version": "1.0.6"
+                    },
+                    "string_decoder": {
+                      "version": "0.10.31"
+                    },
+                    "util-deprecate": {
+                      "version": "1.0.2"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "cfb": {
+          "version": "0.10.3"
+        },
+        "jszip": {
+          "version": "2.4.0",
+          "dependencies": {
+            "pako": {
+              "version": "0.2.8"
+            }
+          }
+        },
+        "crc-32": {
+          "version": "0.4.0"
+        },
+        "adler-32": {
+          "version": "0.3.0"
+        },
+        "commander": {
+          "version": "2.9.0",
+          "dependencies": {
+            "graceful-readlink": {
+              "version": "1.0.1"
+            }
+          }
+        }
+      }
+    }
+  }
+}
