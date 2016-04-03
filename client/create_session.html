@@ -6,6 +6,8 @@
       
     <div class="btn-admin-group row">
 
+      <button class="btn btn-danger btn-lg navbar-right col-md-6 col-xs-6" id="endssn">End Session</button>
+      <a target="_blank" href="/d/{{sessionId}}/p"><button class="btn btn-primary btn-lg navbar-right col-md-6 col-xs-6">Go to Public View</button></a>
       <button class="btn btn-danger btn-lg navbar-right btn-admin col-md-6" id="endssn">End Session</button>
       <a target="_blank" href="/d/{{sessionId}}/p"><button class="btn btn-primary btn-lg navbar-right btn-admin col-md-6">Go to Poll View</button></a>
     </div> 
@@ -33,13 +35,13 @@
 </div>
   <div class="row panel-button-group">
     <div class="col-md-4 nopadding">
-      <button id="changeToThisPublic" class="btn btn-success btn-block button-1">Push to public view</button>
+      <button id="changeToThisPublic" class="btn btn-success btn-block">Push to public view</button>
     </div>
     <div class="col-md-4 nopadding">
       <button id="resetPollBtn" class="btn btn-warning btn-block button-1">Reset Polls</button>
     </div> 
     <div class="col-md-4 nopadding">
-      <button id="deleteThisQuestion" class="btn btn-danger btn-block button-1">Delete</button>
+      <button id="deleteThisQuestion" class="btn btn-danger btn-block">Delete</button>
     </div>
   </div>
 </section>
