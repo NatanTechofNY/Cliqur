@@ -179,6 +179,7 @@
 	background-color: #263238;
 	color: white;
 	border: none;
+
 }
 .mc:hover {
 	color: #FF7043;
@@ -254,6 +255,11 @@ input[type=password] {
   z-index: 9999;
   color: white;
 }
+#sendQuestionBtn, #clearQuestionBtn {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 10px;
+}
 
 #createSessionForm{ 
     overflow: hidden;
@@ -279,7 +285,7 @@ input[type=password] {
 }
 .navbar-brand {
 	color: #BDBDBD;
-	margin-right: 2% !important;
+	margin-left: 0.5% !important;
 }
 .navbar-brand: hover {
 	color: white;
