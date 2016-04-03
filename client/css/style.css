@@ -216,7 +216,6 @@
    border-radius: 0px;
 }
 body {
-  overflow-x: hidden;
 }
 #pinDiv {
   z-index: 9997;
