@@ -16,3 +16,12 @@ if Meteor.isClient
 
 		
 	)
+
+
+
+	UI.registerHelper('eq', (item1, item2, options) ->
+		if(item1 is item2)
+			return true;
+		else
+			return false;
+	)

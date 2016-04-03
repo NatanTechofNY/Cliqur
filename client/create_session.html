@@ -44,24 +44,15 @@
                 <li class="sidebar-brand">
                     <h3>Class Attendance</h3>
                 </li>
-                <li class="student-item">
-                    Peter Zheng
-                </li>
-                <li class="student-item">
-                    Rabeea Ahmad
-                </li>
-                <li class="student-item">
-                    Natan
-                </li>
-                <li class="student-item">
-                    Jay
-                </li>
-                <li class="student-item">
-                    Rachel
-                </li>
-                 <li class="student-item">
-                    
-                </li>
+                {{#each usersList}}
+                    <li class="student-item" title="{{studentId}}">
+                        {{#if eq userId SessionItem.sessionOwnerId}}
+                            <b>{{fullName}}</b>
+                        {{else}}
+                            <span>{{fullName}}</span>
+                        {{/if}}
+                    </li>
+                {{/each}}
             </ul>
             <button class="btn btn-danger btn-block generate-button">Generate Report</button>
         </div>
