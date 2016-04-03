@@ -80,15 +80,6 @@
     padding: 50px;
 }
 
-    .fix-button-left {
-        height: 50px;
-    width: 30%;
-    top: 20vh;
-      left: 4%;
-      background-color: #fff;
-      position: relative;
-      z-index: 999;
-}
 .control-label {
 	width: 20%;
 	height: 12%;
@@ -115,20 +106,6 @@
     left: 10vh;
     position: absolute;
 }
-.panel-button-group {
-    position: absolute;
-    bottom: 0%;
-    left: 20vh;
-    width: 90%;
-    padding: 0px;
-    margin: 0px;
-}
-.panel-button {
-    width: 60%;
-    padding: 40px; 
-    margin: 0px; 
-    height: 200px;
-}
 .btn-lg {
     width: 150px;
     padding: 20px;
@@ -137,8 +114,8 @@
     color: #333;
 }
 .generate-button {
-    position: relative;
-    top: 76%;
+    position: fixed;
+    bottom: 0;
     border-radius: 0px;
     height: 100px;
 }
@@ -241,7 +218,7 @@
 .well {
     left: 10vh;
     margin-top: 50px;
-    right: 10vh;
+    right: 0;
 }
 .navbar-right {
     width: 60%;
@@ -252,7 +229,7 @@
    border-radius: 0px;
 }
 #pinDiv {
-  z-index: 9997;
+  z-index: 2;
   background-color: rgba(0,0,0, 0.9);
   height: 100%;
   width: 100%;
@@ -274,11 +251,11 @@ input[type=password] {
     left: 50%;
     margin-top: -100px;
     margin-left: -200px;
-    z-index: 9998;
+    z-index: 3;
 }
 
 #pinTitle {
-  z-index: 9999;
+  z-index: 4;
   color: white;
 }
 
@@ -341,8 +318,8 @@ input[type=password] {
 .well {
     height: 60vh;
     width: 100vh;
-    padding-top: 100px;
-    position: fixed;
+    padding-top: 50px;
+    position: absolute;
     }
 .btn-fluid {
   width: 100vh;
@@ -437,25 +414,18 @@ input[type=password] {
     }
     }
 
-    @media screen and (min-width: 780px) {
-         .fix-button-left {
-        height: 50px;
-    width: 55%;
+    @media screen and (min-width: 767px) {
+    .fix-button-left {
+    height: 50px;
+    width: 100%;
     top: 10vh;
-      left: 2%;
+      left: 20%;
       position: relative;
     }
     .navbar-right {
         float: right;
     }
 
-    .slide {
-    padding-top: 30px;
-    height: 81vh;
-    width: 100%;
-    left: 0vh;
-    position: fixed;
-}
     .panel-button-group {
     position: fixed;
     bottom: 0%;
@@ -477,13 +447,13 @@ input[type=password] {
 
 @media screen and (min-width: 450px) {
 .panel-button-group {
-    position: fixed;
+position: fixed;
     bottom: 0%;
     left: 6vh;
     width: 90%;
     padding: 0px;
     margin: 0px;
-}
+    }
 .generate-button {
     top: 40vh;
 }
@@ -517,6 +487,11 @@ input[type=password] {
     }
 }
 
+@media screen and (min-width: 414px) {
+    .generate-button {
+    top: 70vh;
+}
+}
 
     /*iphone*/
 @media screen and (min-width: 320px) {
@@ -530,6 +505,7 @@ input[type=password] {
     }
     .well {
         top: 10%;
+        left: 10%;
         height: 100%;
     }
     .navbar-right {
@@ -545,7 +521,7 @@ position: fixed;
     }
 
 .generate-button {
-    top: 70vh;
+    top: 65vh;
 }
 }
 
