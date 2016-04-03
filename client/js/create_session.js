@@ -29,15 +29,18 @@ if (Meteor.isClient) {
 	       			if (e)
 	       				return alert(e.error);
 	       			else if(res){
-	       				var byteCharacters = atob(res);
-	       				var byteNumbers = new Array(byteCharacters.length);
-						for (var i = 0; i < byteCharacters.length; i++) {
-							byteNumbers[i] = byteCharacters.charCodeAt(i);
-						};
-						var byteArray = new Uint8Array(byteNumbers);
-						var blob = new Blob([byteArray], {type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+	       		// 		var byteCharacters = atob(res);
+	       		// 		var byteNumbers = new Array(byteCharacters.length);
+    						// for (var i = 0; i < byteCharacters.length; i++) {
+    						// 	byteNumbers[i] = byteCharacters.charCodeAt(i);
+    						// };
+    						// var byteArray = new Uint8Array(byteNumbers);
 
+    						// var blob = new Blob([byteArray], {type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}); `
+
+                var blob = new Blob([res], {type: ""});//application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 	       				saveAs(blob, "attendance.xlsx");
+                // window.open(res, "_blank");
 	       			}
 	       		});
        		};
