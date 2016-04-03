@@ -3,15 +3,27 @@ if (Meteor.isClient) {
 
 	};
 
-
+	var tempRet;
 	Template.indexItem.events({
-		'click #joinSessionBtn': function () {
+		'click #joinSessionBtn': function (e) {
 			var classCode = $('#codeInput').val();
 			var regCheck = /^[a-z0-9]+$/i;
-			if(typeof classCode !== 'string' && classCode.length !== 6)
-				return $('#errorMSG-ONE')[0].innerHTML = "Session ID must be 6 characters long.", $("#errorMSG-ONE").show(), $('#errorMSG-ONE').fadeOut(2400);
-			else if (!regCheck.test(classCode))
-				return $('#errorMSG-ONE')[0].innerHTML = "Invalid session ID.", $("#errorMSG-ONE").show(), $('#errorMSG-ONE').fadeOut(2400);
+			if(typeof classCode !== 'string' || classCode.length !== 6){
+				Session.set('toJoinSession', '');
+				if(tempRet) {tempRet = undefined;return false;};
+				$('#errorMSG-ONE')[0].innerHTML = "Session ID must be 6 characters long.", $("#errorMSG-ONE").css({ opacity: 1 }), $('#errorMSG-ONE').fadeTo(2400, 0);
+				e.preventDefault();
+				e.stopPropagation();
+				return false;
+			}
+			else if (!regCheck.test(classCode)) {
+				Session.set('toJoinSession', '');
+				if(tempRet) {tempRet = undefined;return false;};
+				$('#errorMSG-ONE')[0].innerHTML = "Invalid session ID.", $("#errorMSG-ONE").css({ opacity: 1 }), $('#errorMSG-ONE').fadeTo(2400, 0);
+				e.preventDefault();
+				e.stopPropagation();
+				return false;
+			}
 			else
 				Session.set('toJoinSession', classCode);
 
@@ -135,6 +147,11 @@ if (Meteor.isClient) {
 
 		}
 	});
+	Template.indexItem.rendered = function() {
+		$('#joinSessionBtn').trigger('click');
+		$('#errorMSG-ONE')[0].innerHTML = ".";
+		Session.set('tempRet', true);
+	};
 	Template.indexItem.destroyed = function() {
 		$('.modal-backdrop').hide();
 		$('#pinDiv').fadeOut(900);
