@@ -91,54 +91,9 @@
 	height: 12%;
 }
 
-/*iphone*/
-@media screen and (min-width: 320px) {
-    .fix-button-left {
-    height: 50px;
-    width: 80%;
-    top: 20vh;
-      left: 4%;
-      padding-left: 0px;
-      position: relative;
-    }
-    
-    .navbar-right {
-        float: right;
-    }
-}
-/*iphone*/
-@media screen and (min-width: 460px) {
-    .fix-button-left {
-        height: 50px;
-    width: 50%;
-    top: 15vh;
-      left: 3%;
-      position: relative;
-    }
-}
-/*tablet*/
-@media screen and (min-width: 768px) {
-    .fix-button-left {
-        height: 50px;
-    width: 55%;
-    top: 10vh;
-      left: 2%;
-      position: relative;
-    }
-    .navbar-right {
-        float: right;
-    }
-}
-/*desktop*/
-@media screen and (min-width: 1024px) {
-    .fix-button-left {
-    height: 50px;
-    width: 35%;
-    top: 10vh;
-      left: 1%;
-      position: relative;
-    }
-}
+
+
+
 .vertical-text {
     transform: rotate(90deg);
 	transform-origin: left top 0;
@@ -279,73 +234,7 @@
     left: 20vh;
     position: fixed;
 }
-@media screen and (max-width: 450px) {
-    body {
-        height: 100%;
-    }
-    .slide {
-        padding-top: 30px;
-    height: 81vh;
-    width: 90%;
-    left: 6vh;
-    position: fixed;
-}
-.panel-button-group {
-    position: fixed;
-    bottom: 0%;
-    left: 6vh;
-    width: 90%;
-    padding: 0px;
-    margin: 0px;
-}
-.generate-button {
-    top: 40vh;
-}
-#sidebar-wrapper {
-    background-color: #fff;
-    color: #333;
-    height: 100vh;
-}
-.box {
-    left: 0;
-}
-.navbar-right {
-    width: 50px;
-    height: 20px;
-}
-.container-fluid {
-	overflow-y: hidden;
-    padding: 0;
-}
-.well {
-    top: 10vh;
-    left: 10vh;
-    right: 10vh;
-}
-}
-@media screen and (max-width: 780px) {
-    .slide {
-    padding-top: 30px;
-    height: 81vh;
-    width: 100%;
-    left: 0vh;
-    position: fixed;
-}
-    .panel-button-group {
-    position: fixed;
-    bottom: 0%;
-    left: 0vh;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-}
-.generate-button {
-    top: 84vh;
-}
-.box {
-    left: 0;
-}
-	}
+
 .well {
     left: 10vh;
     margin-top: 50px;
@@ -402,11 +291,7 @@ input[type=password] {
     padding: 0px !important;
     margin: 0px !important;
 }
-@media screen and (min-width: 1016px) {
-    .box {
-    left: 15vh;
-}
-	}
+
 #status  {
     margin-top: 1.4%;
 	width: 20%;
@@ -525,8 +410,123 @@ input[type=password] {
    font-weight: 200;
 }
 
-@media only screen and (max-width: 768px) {
-   .demo .main-title {
-      font-size: 3em;
-   }
+    @media screen and (min-width: 1016px) {
+        .box {
+        left: 15vh;
+         }
+         .fix-button-left {
+    height: 50px;
+    width: 35%;
+    top: 10vh;
+      left: 1%;
+      position: relative;
+    }
+    }
+
+    @media screen and (max-width: 780px) {
+         .fix-button-left {
+        height: 50px;
+    width: 55%;
+    top: 10vh;
+      left: 2%;
+      position: relative;
+    }
+    .navbar-right {
+        float: right;
+    }
+
+    .slide {
+    padding-top: 30px;
+    height: 81vh;
+    width: 100%;
+    left: 0vh;
+    position: fixed;
 }
+    .panel-button-group {
+    position: fixed;
+    bottom: 0%;
+    left: 0vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+        }
+        .generate-button {
+            top: 84vh;
+        }
+        .box {
+            left: 0;
+        }
+         .demo .main-title {
+              font-size: 3em;
+           }
+    }
+
+@media screen and (max-width: 450px) {
+    body {
+        height: 100%;
+    }
+    .slide {
+        padding-top: 30px;
+    height: 81vh;
+    width: 90%;
+    left: 6vh;
+    position: fixed;
+}
+.panel-button-group {
+    position: fixed;
+    bottom: 0%;
+    left: 6vh;
+    width: 90%;
+    padding: 0px;
+    margin: 0px;
+}
+.generate-button {
+    top: 40vh;
+}
+#sidebar-wrapper {
+    background-color: #fff;
+    color: #333;
+    height: 100vh;
+}
+.box {
+    left: 0;
+}
+.navbar-right {
+    width: 50px;
+    height: 20px;
+}
+.container-fluid {
+    overflow-y: hidden;
+    padding: 0;
+}
+.well {
+    top: 10vh;
+    left: 10vh;
+    right: 10vh;
+}
+    .fix-button-left {
+        height: 50px;
+    width: 50%;
+    top: 15vh;
+      left: 3%;
+      position: relative;
+    }
+}
+
+
+    /*iphone*/
+@media screen and (min-width: 320px) {
+    .fix-button-left {
+    height: 50px;
+    width: 80%;
+    top: 20vh;
+      left: 4%;
+      padding-left: 0px;
+      position: relative;
+    }
+    
+    .navbar-right {
+        float: right;
+    }
+}
+
