@@ -50,7 +50,7 @@ if (Meteor.isClient) {
        		});
        	},
        	'click #deleteThisQuestion': function() {
-       		if (confirm('are you sure?')) {
+       		if (confirm('Are you sure you want to delete this question?')) {
        			Meteor.call('removeQuestion', {questionId: $('input[name="optionsRadios"]:checked').val(), sessionId: Router.current().params.sessionId, userId: Session.get('userSessItem').userId}, function (err, res) {
 	       			if (err) {
 	       				alert(err.error);
