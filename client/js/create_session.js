@@ -92,5 +92,9 @@ if (Meteor.isClient) {
 		      }
 		      else return "Unknown";
     	}
+      //clickerResponse: function() {
+        //var userId = Router.current().params.sessionId;
+        //return Sessions.findOne({"clickerData": clickerResponse})
+      //}
     });
 }

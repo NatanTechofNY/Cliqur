@@ -38,16 +38,16 @@
 	background-color: white;
 	height: 100% !important;
 }
-#createSessionBtn {
-	height: 5% !important;
-	width: 30% !important;
-	background-color: white;
-	color: black;
-	border-radius: 1px;
-	
+#joinSessionBtn {
+	width: 100%;
 }
 #createSessionBtn {
-    font-size: 18px;
+	width: 100%;
+}
+#codeInput {
+	border-radius: 0px;
+	font-size: 13px;
+	padding-left: 4%;
 }
 .move-right {
     left: 10vh;
@@ -91,54 +91,9 @@
 	height: 12%;
 }
 
-/*iphone*/
-@media screen and (min-width: 320px) {
-    .fix-button-left {
-    height: 50px;
-    width: 80%;
-    top: 20vh;
-      left: 4%;
-      padding-left: 0px;
-      position: relative;
-    }
-    
-    .navbar-right {
-        float: right;
-    }
-}
-/*iphone*/
-@media screen and (min-width: 460px) {
-    .fix-button-left {
-        height: 50px;
-    width: 50%;
-    top: 15vh;
-      left: 3%;
-      position: relative;
-    }
-}
-/*tablet*/
-@media screen and (min-width: 768px) {
-    .fix-button-left {
-        height: 50px;
-    width: 55%;
-    top: 10vh;
-      left: 2%;
-      position: relative;
-    }
-    .navbar-right {
-        float: right;
-    }
-}
-/*desktop*/
-@media screen and (min-width: 1024px) {
-    .fix-button-left {
-    height: 50px;
-    width: 35%;
-    top: 10vh;
-      left: 1%;
-      position: relative;
-    }
-}
+
+
+
 .vertical-text {
     transform: rotate(90deg);
 	transform-origin: left top 0;
@@ -184,15 +139,20 @@
     border-radius: 0px;
     height: 100px;
 }
-.btn-success {
-	
-}
+
 .container-box, .jumbotron {
 	margin-top: 3% !important;
+	overflow-y: hidden;
+}
+.jumbotron {
+	background-color: #263238;
+	opacity: 0.5;
 }
 .student-response {
     height: 100px;
+	resize: none;
 }
+
 .student-input {
 	font-size: 18px !important;
 	padding-left: 5px;
@@ -201,11 +161,6 @@
     height: 70px;
 	border: 1px solid #BDBDBD;
     
-}
-.student-qa-button {
-    width: 100%;
-    height: 50px;
-	border-radius: 2px !important;
 }
 .qa-button-group {
     padding-top: 25px;
@@ -216,28 +171,35 @@
     position: relative;
     padding-bottom: 20px;
 }
+.student-qa-button {
+    width: 100%;
+    height: 50px;
+	border-radius: 2px !important;
+}
+
 .student-response-button {
     width: 100%;
-	color: white;
+	color: #263238;
 	border-radius: 2px;
-	border: none;
-	background-color: #F57F17;
-}
-#mc {
-	font-size: 13px !important;
-	background-color: #263238;
-	
-}
-#mc:hover {
-	color: #536DFE;
+	border: 1.5px solid #FF7043;
+	background:none;
+	background-color: transparent; 
 }
 .student-response-button:hover {
-    color: #fff;
+	background-color: #FF7043;
+}
+.mc {
+	margin-top: 1.5%;
+	background-color: #263238;
+	color: white;
+	border: none;
+}
+.mc:hover {
+	color: #FF7043;
+	background-color: #263238;
 }
 .response-label {
-	width: 400px;
-    padding-top: 30px;
-    padding-bottom: 10px;
+	width: 100%;
 }
 
 .public-display {
@@ -257,8 +219,13 @@
    padding-top: 20px;
 }
 #login-name {
-	position: relative;
-	top: 1% !important;
+	width: 15%;
+	margin-top: 1.5%;
+}
+#cover-text {
+	color: white;
+	margin-left: 42%;
+	font-size: 17px;
 }
 .slide {
     padding-top: 30px;
@@ -267,17 +234,245 @@
     left: 20vh;
     position: fixed;
 }
-@media screen and (max-width: 450px) {
-    body {
-        height: 100%;
+
+.well {
+    left: 10vh;
+    margin-top: 50px;
+    right: 10vh;
+}
+.navbar-right {
+    width: 60%;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+   border-radius: 0px;
+}
+#pinDiv {
+  z-index: 9997;
+  background-color: rgba(0,0,0, 0.9);
+  height: 100%;
+  width: 100%;
+  position:absolute;
+}
+input[type=password] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+#pinForm {
+     height: 200px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    z-index: 9998;
+}
+
+#pinTitle {
+  z-index: 9999;
+  color: white;
+}
+
+#createSessionForm{ 
+    overflow: hidden;
+}
+.button-1 {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    height: 200% !important;
+}
+.nopadding-bottom {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+#status  {
+    margin-top: 1.4%;
+	width: 20%;
+}
+
+.navbar {
+	border-radius: 0px !important;
+	
+}
+.navbar-text {
+    padding-right: 20px;
+	color: grey;
+}
+.navbar-brand {
+	color: #BDBDBD;
+}
+.navbar-brand: hover {
+	color: white;
+}
+.exit {
+	cursor: pointer;
+	background-color: #FF7043;
+	height: 40%;
+	width: 12%;
+	margin-left: 2%; 
+}
+.progress span{
+    float: left;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.index-container input {
+    height: 72px;
+}
+.index-container {
+ padding-top: 30vh;
+}
+.btn-modal {
+    padding: 15px 30px;
+}
+.well {
+    height: 60vh;
+    width: 100vh;
+    padding-top: 100px;
+    position: fixed;
     }
+.btn-fluid {
+  width: 100vh;
+}
+.button-group {
+  top: 30vh;
+  position: relative;
+}
+
+
+
+/*demo */
+.large-header {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   background: #111;
+ 	overflow-x: hidden;
+   background-size: cover;
+   background-position: center center;
+   z-index: 999;
+}
+
+.demo .large-header {
+   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+}
+
+.container .demo {
+   padding: 0;
+   margin: 0;
+   z-index: 9999
+}
+.container-fluid {
+   padding: 0;
+}
+
+
+.main-title {
+   position: absolute;
+   margin: 0;
+   padding: 0;
+   color: #F9F1E9;
+   text-align: center;
+   top: 20%;
+   left: 50%;
+   -webkit-transform: translate3d(-50%, -50%, 0);
+   transform: translate3d(-50%, -50%, 0);
+}
+.thin-title {
+   position:absolute;
+   margin: 0;
+   padding: 0;
+   color: #F9F1E9;
+   text-align: center;
+   top: 30%;
+   left: 50%;
+   -webkit-transform: translate3d(-50%, -50%, 0);
+   transform: translate3d(-50%, -50%, 0);
+   font-size: 18px;
+}
+.demo .main-title {
+   text-transform: uppercase;
+   font-size: 4.2em;
+   letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+   font-weight: 200;
+}
+ @media screen and (min-width: 1400px) {
+    .fix-button-left {
+    height: 50px;
+    width: 35%;
+    top: 10vh;
+      left: 0;
+      position: relative;
+    }
+ }
+
+
+
+    @media screen and (min-width: 1016px) {
+        .box {
+        left: 15vh;
+         }
+         .fix-button-left {
+    height: 50px;
+    width: 35%;
+    top: 10vh;
+      left: 0;
+      position: relative;
+    }
+    }
+
+    @media screen and (min-width: 780px) {
+         .fix-button-left {
+        height: 50px;
+    width: 55%;
+    top: 10vh;
+      left: 2%;
+      position: relative;
+    }
+    .navbar-right {
+        float: right;
+    }
+
     .slide {
-        padding-top: 30px;
+    padding-top: 30px;
     height: 81vh;
-    width: 90%;
-    left: 6vh;
+    width: 100%;
+    left: 0vh;
     position: fixed;
 }
+    .panel-button-group {
+    position: fixed;
+    bottom: 0%;
+    left: 0vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+        }
+        .generate-button {
+            top: 84vh;
+        }
+        .box {
+            left: 0;
+        }
+         .demo .main-title {
+              font-size: 3em;
+           }
+    }
+
+@media screen and (min-width: 450px) {
 .panel-button-group {
     position: fixed;
     bottom: 0%;
@@ -302,6 +497,7 @@
     height: 20px;
 }
 .container-fluid {
+    overflow-y: hidden;
     padding: 0;
 }
 .well {
@@ -309,105 +505,44 @@
     left: 10vh;
     right: 10vh;
 }
+    .fix-button-left {
+        height: 50px;
+    width: 50%;
+    top: 15vh;
+      left: 3%;
+      position: relative;
+    }
 }
-@media screen and (max-width: 780px) {
-    .slide {
-    padding-top: 30px;
-    height: 81vh;
-    width: 100%;
-    left: 0vh;
-    position: fixed;
-}
+
+
+    /*iphone*/
+@media screen and (min-width: 320px) {
+    .fix-button-left {
+    height: 50px;
+    width: 80%;
+    top: 20vh;
+      left: 8%;
+      padding-left: 0px;
+      position: relative;
+    }
+    .well {
+        top: 10%;
+        height: 100%;
+    }
+    .navbar-right {
+        float: right;
+    }
     .panel-button-group {
-    position: fixed;
+position: fixed;
     bottom: 0%;
-    left: 0vh;
-    width: 100%;
+    left: 6vh;
+    width: 90%;
     padding: 0px;
     margin: 0px;
-}
+    }
+
 .generate-button {
-    top: 84vh;
-}
-.box {
-    left: 0;
-}
-.well {
-    left: 10vh;
-    margin-top: 50px;
-    right: 10vh;
-}
-.navbar-right {
-    width: 60%;
+    top: 70vh;
 }
 }
-.nopadding {
-   padding: 0 !important;
-   margin: 0 !important;
-   border-radius: 0px;
-}
-#pinDiv {
-  z-index: 2;
-  background-color: rgba(0,0,0, 0.9);
-  height: 100%;
-  width: 100%;
-  position:absolute;
-}
-input[type=password] {
-    padding: 10px;
-    border: 1px solid #ddd;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    font-size: 30px;
-}
-#pinForm {
-     height: 200px;
-    width: 400px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -200px;
-    z-index: 3;
-}
-
-#pinTitle {
-  z-index: 4;
-  color: white;
-}
-
-#createSessionForm{
-    overflow: hidden;
-}
-.button-1 {
-    padding-top: 25px !important;
-    padding-bottom: 25px !important;
-    height: 200% !important;
-}
-.nopadding-bottom {
-    padding: 0px !important;
-    margin: 0px !important;
-}
-@media screen and (min-width: 1016px) {
-    .box {
-    left: 15vh;
-}
-}
-#status  {
-    float: right;
-}
-.navbar-text {
-    padding-right: 20px;
-}
-.btn-modal {
-    padding: 15px 30px;
-}
-.well {
-    height: 60vh;
-    width: 100vh;
-    padding-top: 100px;
-    position: fixed;
-}
-
 

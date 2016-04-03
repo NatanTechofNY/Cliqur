@@ -1,11 +1,11 @@
 <template name="crowd_session">
-    <nav class="navbar navbar-default">
+    <nav class="navbar">
       <div class="container-fluid">
           <a class="navbar-brand" href="#">
             AnswerMe Students
             </a>
-            <buttom class="btn btn-danger btn-lg navbar-right" style="z-index:1;" id="endssn">Exit Session</buttom>
-            <p id = "login-name" class="navbar-text navbar-right">Signed in as {{userName}}</p>
+            <buttom class="btn btn-danger btn-lg navbar-right exit" style="z-index:1;" id="endssn">Exit Session</buttom>
+            <p id = "login-name" class="navbar-right">Signed in as {{userName}}</p>
             <label id="status" class="navbar-text navbar-right"></label>
 
       </div>
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-      <div class="row">
+       <div class="row">
         <div class="col-md-offset-2 col-md-8 col-md-offset-2">
           <div class="container-fluid">
             <textarea class="student-input" type="text" name="questionInput" placeholder="Enter your question here..."></textarea>
@@ -33,7 +33,7 @@
                 </button>
               </div>
               <div class="col-md-6">
-                <button id="clearQuestionBtn" class="btn student-response-button btn-warning student-qa-button">
+                <button id="clearQuestionBtn" class="btn student-response-button student-qa-button">
                   Clear
                 </button>
               </div>
