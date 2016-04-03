@@ -211,14 +211,32 @@ body {
 .btn-success {
 	
 }
-.container{
+#stud-container{
 	overflow-y: hidden;
-	height: 120%;
+	height: 570px;
 	width: 100%;
-	background-color: #0E0E15;
 }
 .jumbotron {
+	z-index: 1;
+	width: 80%;
 	margin-top: 3% !important;
+	margin: auto;
+	background-color: black;
+	opacity: 0.5;
+	
+}
+#cover-text {
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	z-index: 1200;
+	margin-top:12% !important;
+	margin-left: 43%;
+	
+}
+#stud-bottom-container {
+	position: relative;
+	top: 3%;
 }
 .student-response {
     height: 100px;
@@ -230,6 +248,7 @@ body {
     width: 100%;
     height: 70px;
 	border: 1px solid #BDBDBD;
+	margin-top: 3% !important;
     
 }
 .qa-button-group {
@@ -242,40 +261,47 @@ body {
     padding-bottom: 20px;
 }
 .student-qa-button {
-    width: 60%;
-	color: white;
-	border: 1px solid white;
-	border-radius: 4px;
-	height: 45px;
-	margin: auto !important;
-	display: inline-block !important;
-	background-color: transparent;	
+    width: 100%;
+    height: 50px;
 }
 .student-qa-button:hover {
 	border-color: #4CAF50;
 }
 .student-response-button {
-    width: 100%;
-	color: white;
-	background-color: red;
-	
+	width: 100%;
+	border: 2px solid red;
+	height: 30% !important;
 }
-
-#mc {
-	font-size: 13px !important;
+#mc-container {
+	margin-top: 4%;
+}
+.mc {
+	width: 95% !important;
 	background-color: #263238;
-	
+	height: 40px !important;
+	border: 1px solid white;
+	border-radius: 1px;
+	margin-top: 12%;
+	color: white;
 }
-#mc:hover {
-	color: #536DFE;
+.mc:hover {
+	color: #4CAF50;
 }
+.letter {
+	color: white;
+	margin-top: -9% !important;
+	}
 .student-response-button:hover {
+    background-color: #2ec4b6;
     color: #fff;
+	border: none;
 }
 .response-label {
+	color: #263238;
 	width: 400px;
     padding-top: 30px;
     padding-bottom: 10px;
+	margin-top: -6%;
 }
 
 .public-display {
@@ -297,8 +323,8 @@ body {
 #login-name {
 	font-size: 12px;
 	margin-right: 5%;
-	margin-top: 1.2%;
-	color: white;
+	margin-top: 1.4%;
+	color: #263238;
 }
 .slide {
     padding-top: 30px;
@@ -417,9 +443,10 @@ input[type=password] {
 #status  {
     float: right;
 }
+
 .navbar {
-	background-color: #0E0E15;
 	border-radius: 0px !important;
+	
 }
 .navbar-text {
     padding-right: 20px;
@@ -452,5 +479,19 @@ input[type=password] {
 .index-container {
  padding-top: 30vh;
 }
+.qa-button-group{
+	margin-left: 12%;
+}
+.studentButton{
+	width: 35%;
+	border: 1px solid #263238;
+	border-radius: 1px;
+	height: 40% !important;
+	background-color: transparent; 
+	display: inline-block !important;
+	margin-left: 4%;
+}
 
+.studentButton:hover {
+	background-color: #4CAF50;
 }

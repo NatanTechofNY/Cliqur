@@ -4,59 +4,62 @@
           <a class="navbar-brand" href="#">
             AnswerMe Students
             </a>
-            <buttom class="exit" style="z-index:1;" id="endssn">Exit Session</buttom>
+            <buttom class="btn btn-danger btn-lg navbar-right" style="z-index:1;" id="endssn">Exit Session</buttom>
             <p id = "login-name" class="navbar-right">Signed in as {{userName}}</p>
             <label id="status" class="navbar-text navbar-right"></label>
 
       </div>
     </nav>
 
-<div class="container box">
-<div class="jumbotron">
-  <div class="row">
-    <div class="col-md-12">
-        <center>
-          <h1></h1>
-        </center>
-      </div>
-    </div>
-  </div>
+<div id = "stud-container" class="container box">
+	
+	<div class="jumbotron">
+		 <span id = "cover-text">No questions sent</span>
+	  <div class="row">
+		<div class="col-md-12">
+			<center>
+			  <h1 class="display-question"></h1>
+			</center>
+		  </div>
+		</div>
+	  </div>
+	
 
-      <div class="row">
+      <div id = "stud-bottom-container" class="row">
         <div class="col-md-offset-2 col-md-8 col-md-offset-2">
           <div class="container-fluid">
             <textarea class="student-input" type="text" name="questionInput" placeholder="Enter your question here..."></textarea>
             <div class="row qa-button-group">
 
-              <div class="col-md-6">
+             
 
-                <button id="#sendQuestionBtn" class="btn btn-warning student-qa-button student-response-button">
-                  Send question
+                <button id="submitQuestionBtn" class="studentButton">
+                  Submit
                 </button>
-              </div>
-              <div class="col-md-6">
-                <button id="clearQuestionBtn" class="btn student-response-button btn-warning student-qa-button">
+             
+             
+                <button id="clearQuestionBtn" class = "studentButton">
                   Clear
                 </button>
-              </div>
+             
             </div>
-            <div class="row">
+            <div id = "mc-container" class="row">
               <div class="col-md-12 col-xs-12 text-center nopadding-bottom">
-                <label class="control-label text-center response-label">Multiple Choice Response</label>
+                <label class="control-label text-center response-label">Multiple Choice Responses</label>
               </div>
               
               <div class="col-md-3 col-xs-3">
 
-                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>A</h2></button>
+                <button class="mc"><span>&#10004;</span>A</button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>B</h2></button>
+                <button class="mc"><span>&#10004;</span>B</button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>C</h2></button>
+                <button class="mc"><span>&#10004;</span>C</button>
               </div>
               <div class="col-md-3 col-xs-3">
-                <button class="btn btn-defaul student-response-button mc"><span>&#10004;</span><h2>D</h2></button>
+                <button class="mc"><span>&#10004;</span>D</button>
               </div>
             </div>
           </div>
