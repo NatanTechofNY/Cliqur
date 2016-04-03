@@ -18,4 +18,4 @@ Cliqur is built primarily on the [Meteor](meteor.com) stack.
 
 ##Questions and Usage
 
-Please feel free to go over the code base (we unfornately haven't commented it too thoroughly, but the application is quite simple). Also feel free to reuse components and parts of this codebase. The project is licensed under MIT anyways.
+Please feel free to go over the code base (we unfortunately haven't commented it too thoroughly, but the application is quite simple). Also feel free to reuse components and parts of this codebase. The project is licensed under MIT anyways.
