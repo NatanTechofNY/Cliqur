@@ -2,6 +2,7 @@
     <section>
       <div class="container-fluid">
         <div class="row">
+        <div class="col-md-8">
           <div class="col-md-12 padding-top">
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -9,19 +10,23 @@
               </div>
               <div class="panel-body public-display">
                 <ul>
-                  <li>question 1</li>
+                  <li>{{pushedQuestion.body}}</li>
+                  <small>{{questionAuthor}}</small>
                 </ul>
               </div>
             </div>
           </div>
+          </div>
+          <div class="col-md-4">
           <div class="col-md-12 padding-top">
             <div class="panel panel-default public-poll">
               <div class="panel-heading">
-                <h3 class="panel-title">Poll</h3>
+                <h3 class="panel-title">Opinion</h3>
               </div>
               <div class="panel-body">
                 <div class="progress">
-                  <span>A.</span> <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40" style="width: 40%">
+                A.
+                  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40" style="width: 40%">
                     <p>{{A}}</p>
                   </div>
                 </div>
@@ -43,6 +48,7 @@
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
