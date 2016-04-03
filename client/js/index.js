@@ -9,9 +9,9 @@ if (Meteor.isClient) {
 			var classCode = $('#codeInput').val();
 			var regCheck = /^[a-z0-9]+$/i;
 			if(typeof classCode !== 'string' && classCode.length !== 6)
-				return alert('Session ID must be 6 characters.');
+				return $('#errorMSG')[0].innerHTML = "Session ID must be 6 characters long.", $('#errorMSG').fadeOut(2400);
 			else if (!regCheck.test(classCode))
-				return alert('Invalid session ID.');
+				return $('#errorMSG')[0].innerHTML = "Invalid session ID.", $('#errorMSG').fadeOut(2400);
 			else
 				Session.set('toJoinSession', classCode);
 
@@ -36,9 +36,9 @@ if (Meteor.isClient) {
 			var stdntId = $('#studentId').val();
 			var regCheckName = /^\d+$/;
 			if(regCheckName.test(fname) || regCheckName.test(lname) || fname.length < 2 || lname.length < 2)
-				return alert('Please enter a valid name.');
+				return $('#errorMSG-joinForm')[0].innerHTML = "Please enter a valid name.", $('#errorMSG-joinForm').fadeOut(2400);
 			else if (stdntId.length < 2)
-				return alert('Please enter a valid student ID');
+				return $('#errorMSG-joinForm')[0].innerHTML = "Please enter a valid student ID.", $('#errorMSG-joinForm').fadeOut(2400);
 
 
 			function tempEndCall(datter) {
@@ -105,12 +105,12 @@ if (Meteor.isClient) {
 
 			var regCheck = /^\d+$/;
 			if(regCheck.test(fname) || regCheck.test(lname) || fname.length < 2 || lname.length < 2)
-				return alert('Please enter a valid name.');
+				return $('#errorMSG-createSession')[0].innerHTML = "Please enter a valid name.", $('#errorMSG-createSession').fadeOut(2400);
 			else if (className.length < 2)
-				return alert('Class name must be longer then two characters');
+				return $('#errorMSG-createSession')[0].innerHTML = "Class name must be longer than two characters.", $('#errorMSG-createSession').fadeOut(2400);
 			else if(pin.length) {
 				if(!regCheck.test(pin) && pin.length != 4)
-					return alert('Pin can only be 4 digits.');
+				return $('#errorMSG-createSession')[0].innerHTML = "Pin can only be 4 digits.", $('#errorMSG-createSession').fadeOut(2400);
 			}
 
 			Meteor.call("addUser", {
