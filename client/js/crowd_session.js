@@ -66,6 +66,17 @@ if (Meteor.isClient) {
         sessionId: function() {
       return Router.current().params.sessionId;
     },
+    inst: function() {
+      var sessionOwnerId = Sessions.findOne({"sessionId": Router.current().params.sessionId});
+      if (sessionOwnerId) sessionOwnerId = sessionOwnerId.sessionOwnerId;
+      var subn = Meteor.subscribe('userDoc', sessionOwnerId);
+      if(subn.ready()) {
+        return Users.findOne({"_id": sessionOwnerId}).fullName;
+      };
+    }, 
+    class: function() {
+      return Sessions.findOne({"sessionId": Router.current().params.sessionId}).sessionName;
+    },
     authorName: function() {
       if (Questions.findOne({isPublic: true})) {
         var sr = Users.findOne({"_id": Questions.findOne({isPublic: true}).authorId});

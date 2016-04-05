@@ -3,6 +3,9 @@ if(Meteor.isClient) {
 		className: function() {
 			return Sessions.findOne({"sessionId": Router.current().params.sessionId}).sessionName;
 		},
+		sess: function() {
+			return Sessions.findOne({"sessionId": Router.current().params.sessionId}).sessionId;
+		},
 		lecturerName: function() {
 			var sessionOwnerId = Sessions.findOne({"sessionId": Router.current().params.sessionId});
 			if (sessionOwnerId) sessionOwnerId = sessionOwnerId.sessionOwnerId;
